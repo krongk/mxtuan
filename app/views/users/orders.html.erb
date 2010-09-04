@@ -1,0 +1,25 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+<table>
+  <tr>
+    <th>产品</th>
+    <th>订单价格</th>
+    <th>是否支付</th>
+    <th>支付方式</th>
+     <th>生成时间</th>
+  </tr>
+
+  <% @orders.each do |order| %>
+    <tr>
+      <td><%=h order.product.title if order.product %></td>
+      <td><%=h number_to_currency(order.order_price) %></td>
+      <td><%=h format_yes_or_no(order.is_pay) %></td>
+      <td><%=h order.pay_type %></td>
+      <td><%=h format_datetime(order.created_at) %></td>
+    </tr>
+  <% end %>
+</table>
+ <%= will_paginate @orders %>
+<br />

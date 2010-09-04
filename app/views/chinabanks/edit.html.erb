@@ -1,0 +1,12 @@
+<h1>Editing chinabank</h1>
+
+<% form_for(@chinabank) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @chinabank %> |
+<%= link_to 'Back', chinabanks_path %>

@@ -1,0 +1,31 @@
+<h3>订单列表</h3>
+
+<table>
+  <tr>
+    <th>用户</th>
+    <th>产品</th>
+    <th>订单价格</th>
+    <th>是否支付</th>
+    <th>支付方式</th>
+     <th>生成时间</th>
+    <th>修改时间</th>
+    <th>菜单</th>
+  </tr>
+
+  <% @orders.each do |order| %>
+    <tr>
+      <td><%=link_to order.user.login, user_path(order.user) %></td>
+      <td><input type="text" size="40" value="<%=h order.product.title if order.product %>"/></td>
+      <td><%=h number_to_currency(order.order_price) %></td>
+      <td><%=h format_yes_or_no(order.is_pay) %></td>
+      <td><%=h order.pay_type %></td>
+      <td><%=h format_datetime(order.created_at) %></td>
+      <td><%=h format_datetime(order.updated_at) %></td>
+      <td><%= link_to '删除订单', order, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+ <%= will_paginate @orders %>
+<br />
+
+<%= link_to '返回主菜单', "/admin" %>

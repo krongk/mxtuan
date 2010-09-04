@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user: 
+  product: 
+  quantity: 1
+  discount: 1.5
+  order_price: 1.5
+  is_pay: false
+  pay_type: 1
+
+two:
+  user: 
+  product: 
+  quantity: 1
+  discount: 1.5
+  order_price: 1.5
+  is_pay: false
+  pay_type: 1

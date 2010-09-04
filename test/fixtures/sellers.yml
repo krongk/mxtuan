@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  contact: MyString
+  info: MyText
+  is_front: false
+  is_checked: false
+  note: MyText
+
+two:
+  name: MyString
+  contact: MyString
+  info: MyText
+  is_front: false
+  is_checked: false
+  note: MyText

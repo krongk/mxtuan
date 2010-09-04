@@ -1,0 +1,127 @@
+body {
+	background-color: #CCC;
+}
+#admin {	
+	margin:0 auto;
+	text-align: left;
+	background-color:#FFF;
+	padding:20px;
+}
+#admin h1,h2{
+  	background-color: #933;
+	margin:0px;
+	padding: 4px;
+	border: 1px solid #900;
+	font-family: "微软雅黑";
+	font-size: 1.4em;
+	font-weight: bold;
+	color: #FFF;
+}
+#admin h3{
+	background-color: #DB9393;
+	margin:0px;
+	padding: 4px;
+	
+	font-family: "微软雅黑";
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #FFF;
+}
+#admin .content1 {
+	
+}
+#admin .content2 {
+
+}
+#admin .title {
+	background-color: #933;
+	padding: 4px;
+	border: 1px solid #900;
+	font-family: "微软雅黑";
+	font-size: 1.4em;
+	font-weight: bold;
+	color: #FFF;
+}
+#admin .set {
+	background-color: #DFDBD2;
+	width: 60em;
+	padding: 20px;
+	border: 1px solid #900;
+}
+input {
+	size: 20;
+	font-family: "微软雅黑";
+	line-height: 25px;
+	vertical-align: middle;
+}
+.input_big {
+	size: 60;
+	font-family: "微软雅黑";
+	line-height: 25px;
+	vertical-align: middle;
+}
+#menu{
+	background-color: #eee;
+	height: 40px;
+	width: 100%;
+	padding:0px;
+	margin:0px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #900;
+	border-bottom-color: #900;
+	border-left-color: #900;
+}
+#menu ul{
+	margin: 0px;
+	padding: 0px;
+}
+#menu ul li{
+	margin: 0px;
+	float: left;
+	padding: 0px;
+	position: relative;
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #900;
+}
+#menu ul li a{
+	margin: 0px;
+	font-family: "微软雅黑";
+	font-size: 1.4em;
+	font-weight: bold;
+	color: #099;
+	text-decoration: none;
+	padding: 6px;
+}
+#menu ul li a:hover{
+	background-color: #FFF;
+	text-decoration: none;
+	color: #933;
+	padding: 6px;
+}
+/* ---------------------------------------------------------------------------------------------*/
+  table { width:auto; border-collapse:collapse; margin-bottom:0.5em; border-top:2px #888 solid; border-bottom:2px #888 solid; }
+  table caption { font-variant:small-caps; }
+  table.full { width:100%; }
+  table.fixed { table-layout:fixed; }
+
+  th,td { padding:0.5em; }
+  thead th { color:#000; border-bottom:2px #800 solid; }
+  tbody th { background:#e0e0e0; color:#333; }
+  tbody th[scope="row"], tbody th.sub { background:#f0f0f0; }
+
+  tbody th { border-bottom:1px solid #fff; text-align:left; }
+  tbody td { border-bottom:1px solid #eee; }
+
+  tbody tr:hover th[scope="row"],
+  tbody tr:hover tbody th.sub { background:#eee; }
+  tbody tr:hover td { background:#eee; }

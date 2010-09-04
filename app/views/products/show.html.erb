@@ -1,0 +1,69 @@
+<h1>
+  <%=h @product.title %>
+</h1>
+<table width="780px" border="0">
+  <tr>
+    <td width="200px">
+      团品总数<br />
+      <%=h @product.total_count %>
+    </td>
+    <td>
+      团购基数
+      <%=h @product.base_count %>
+    </td>
+    <td rowspan="3">
+      <p>  开卖时间<br />
+        <%=h @product.started_at %>
+      </p><p>
+        结束时间<br />
+        <%=h @product.ended_at%></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="200px">
+      原价<br />
+      <%=h @product.original_price %>
+    </td>
+    <td>
+      折扣<br />
+      <%=h @product.discount %>
+    </td>
+  </tr>
+  <tr>
+    <td width="200px">
+      折扣后现价<br />
+      <%=h @product.now_price %>
+    </td>
+    <td>
+      为你节省了<br />
+      <%=h @product.save_price %>
+    </td>
+  </tr>
+</table>
+<div class="content2">
+
+<p>
+  <%=image_tag @product.picture %>
+</p>
+<hr/>
+<p>
+  <%= @product.summary %>
+</p>
+<hr/>
+<p>
+  <%= @product.details %>
+</p>
+<hr/>
+<p>
+  <%= @product.contact %>
+</p>
+<hr/>
+<p>
+  <%= @product.comment %>
+</p>
+</div>
+<hr/>
+
+
+<%= link_to '编辑', edit_product_path(@product) %> |
+<%= link_to '返回', products_path %>

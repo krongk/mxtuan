@@ -1,0 +1,28 @@
+<h3>用户注册列表</h3>
+<div class="content1">
+  <table>
+    <tr>
+      <th>编号</th>
+      <th>登录名</th>
+      <th>电子邮箱</th>
+      <th>留言时间</th>
+      <th colspan="3">菜单</th>
+    </tr>
+
+    <% @users.each do |user| %>
+      <tr>
+        <td><%=h user.id %></td>
+        <td><%=h user.login %></td>
+        <td><%=h user.email %></td>
+        <td><%=h format_datetime(user.created_at) %></td>
+        <td><%= link_to '详细', user %></td>
+        <td><%= link_to '修改', edit_user_path(user) %></td>
+        <td><%= link_to '删除', user, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <br />
+  <%=link_to "返回主菜单", "/admin"%>
+</div>
+

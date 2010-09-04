@@ -1,0 +1,47 @@
+<h3>团品列表</h3>
+<div class="content1"><%= link_to '返回主菜单', "/admin" %>&nbsp;&nbsp;|&nbsp;&nbsp;<%= link_to '添加新团品', new_product_path %>
+<table>
+  <tr>
+    <th colspan="3">菜单</th>
+    <th>编号</th>
+    <th>标题</th>
+    <th>团品总数量</th>
+    <th>销售数量</th>
+    <th>原价</th>
+    <th>折扣</th>
+    <th>现价</th>
+    <th>节约产品</th>
+    <th width="140px">上线时间</th>
+    <th  width="140px">结束时间</th>
+    <th>状态</th>
+    <th>是否上线</th>
+    <th>是否正常</th>
+  </tr>
+
+<% @products.each do |product| %>
+  <tr>
+     <td><%= link_to '详细', product %></td>
+    <td><%= link_to '修改', edit_product_path(product) %></td>
+    <td><%= link_to '删除', product, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%=h product.id %></td>
+    <td><input type="text" size=30 value="<%=h product.title %>"/></td>
+    <td><%=h product.total_count %></td>
+    <td><%=h product.sold_count %></td>
+    <td><%=h number_to_currency(product.original_price) %></td>
+    <td><%=h product.discount %></td>
+    <td><%=h number_to_currency(product.now_price) %></td>
+    <td><%=h number_to_currency(product.save_price) %></td>
+    <td><%=h format_datetime(product.started_at) %></td>
+    <td><%=h format_datetime(product.ended_at) %></td>
+    <td><%=h product.status %></td>
+    <td><%=h format_yes_or_no(product.is_publish) %></td>
+    <td><%=h format_yes_or_no(product.is_ok) %></td>
+   
+  </tr>
+<% end %>
+</table>
+<%= will_paginate @products %>
+<br />
+
+<%= link_to '添加新团品', new_product_path %>
+</div>

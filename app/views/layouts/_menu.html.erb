@@ -1,0 +1,26 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+<div id="header">
+  <div id="logo">
+    <a href="#">
+      <img id="top" alt="成都美享团" src="/image/logo.png"/>
+    </a>
+  </div>
+  <ul id="navigation">
+    <li><a href="/today">今日团购</a></li>
+    <li><a title="往期团购" href="/yesterday">往期团购</a></li>
+    <li><a title="我的团购" href="/profile">我的团购</a></li>
+    <li><a title="新手帮助" href="/about/learn">新手帮助</a></li>
+    <li></li>
+     <% if current_user %>
+     <li class="subscribe">
+      <%=link_to "你好,#{current_user.login}", user_path(current_user)%>
+      &nbsp;&nbsp;<a href="/logout">退出</a></li>
+    <% else -%>
+     <li class="subscribe"><a href="/login">登录</a></li>
+     <li class="subscribe"><a href="/signup">注册</a></li>
+    <% end -%>
+  </ul>
+</div>

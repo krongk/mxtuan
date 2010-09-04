@@ -1,0 +1,51 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+<link href="/yaml/add-ons/accessible-tabs/tabs.css" rel="stylesheet" type="text/css"/>
+<!-- embedded styles for dynamic layout options -->
+<style type="text/css">
+  #js-info { display:block; padding: 10px 20px; background: #fee; color: #800; margin: 0 0 10px 0; }
+  .js #js-info { display:none; }
+</style>
+<!-- JavaScript Detection -->
+<script type="text/javascript">document.documentElement.className += " js";</script> 
+<script src="/yaml/add-ons/accessible-tabs/jquery.tabs.js" type="text/javascript"></script>
+<script src="/yaml/add-ons/syncheight/jquery.syncheight.js" type="text/javascript"></script> 
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".example2").accessibleTabs({fx:"show",fxspeed: '', syncheights: true, tabbody:'.tab-content'});
+});
+</script>
+
+<div class="main_side">
+<div class="jquery_tabs example2">
+  <h3>基本信息</h3>
+  <div class="tab-content">
+    <%= error_messages_for :user %>
+  <% form_for @user,:html=>{:id=>"yform",:class=>'yform'} do |f| -%>
+  <%= f.hidden_field :login %><%= f.hidden_field :email%>
+  <h2>你好，<%=@user.login%></h2>
+  <p>你使用的邮箱是: <%=@user.email%></p>
+  <hr/>
+  <p><a href="javascript:void();" onclick="document.getElementById('reset_password').style.display='block';">设定新密码.</a></p>
+  <div id="reset_password" style="display: none;">
+    <p><label for="password">新密码：</label>
+      <%= f.password_field :password,:class=>"{required:true,minlength:5}" %></p>
+    <p><label for="password_confirmation">密码确认：</label>
+      <%= f.password_field :password_confirmation ,:class=>"{required:true,minlength:5,equalTo:'#user_password'}"%></p>
+    <p><%= submit_tag '好了，提交！' %></p>
+  </div>
+  <% end -%>
+  </div>
+  <h3>订单信息</h3>
+  <div class="tab-content">
+    <%=render :file=>'users/orders'%>
+  </div>
+  <h3>留言反馈</h3>
+  <div class="tab-content">
+    <p>您最近没有新留言.</p>
+
+  </div>
+</div> 
+</div>

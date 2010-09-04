@@ -1,0 +1,28 @@
+<p>
+  <b>Name:</b>
+  <%=h @feedback.name %>
+</p>
+
+<p>
+  <b>Contact:</b>
+  <%=h @feedback.contact %>
+</p>
+
+<p>
+  <b>Message:</b>
+  <%=h @feedback.message %>
+</p>
+
+<p>
+  <b>Is check:</b>
+  <%=h @feedback.is_check %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%=h @feedback.note %>
+</p>
+
+
+<%= link_to 'Edit', edit_feedback_path(@feedback) %> |
+<%= link_to 'Back', feedbacks_path %>

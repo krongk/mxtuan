@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  contact: MyString
+  message: MyText
+  is_check: false
+  note: MyText
+
+two:
+  name: MyString
+  contact: MyString
+  message: MyText
+  is_check: false
+  note: MyText

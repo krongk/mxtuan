@@ -1,0 +1,34 @@
+<script language="javascript">
+  $(document).ready(function(){
+    //添加表单验证
+    $("#feedForm").validate();
+  });
+</script>
+<div class="main_side">
+  <div class="head"><h2>意见反馈</h2></div>
+  <div class="sect">
+    <p class="notice">请在这里留下您的宝贵意见，也可以给我们推荐您希望团购的商家。</p>
+
+<% form_for(@feedback,:html=>{:class=>'yform',:id=>'feedForm'}) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name,"您的称呼" %>
+    <%= f.text_field :name,:class=>'required' %>
+  </p>
+  <p>
+    <%= f.label :contact,"联系方式" %>
+    <%= f.text_field :contact,:class=>'required' %><br/>请留下您的 Email 或 QQ 号，方便我们回复
+  </p>
+  <p>
+    <%= f.label :message,"反馈内容" %>
+    <%= f.text_area :message,:cols=>65,:rows=>8,:class=>'required'  %>
+  </p>
+  
+  <p>
+    <%= f.submit '提  交' %>
+  </p>
+<% end %>
+
+ </div>
+</div>

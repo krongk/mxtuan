@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>Equal Heights with YAML's subtemplates</title>
+<!-- add your meta tags here -->
+<!--[if lte IE 7]>
+<link href="css/patches/patch_equal_heights.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<link href="stylesheets/layout.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- skip link navigation -->
+<ul id="skiplinks">
+	<li><a class="skip" href="#nav">Skip to navigation (Press Enter).</a></li>
+	<li><a class="skip" href="#col1">Skip to main content (Press Enter).</a></li>
+</ul>
+
+<div class="page_margins">
+  <div class="page">
+    <div id="header" role="banner">
+      <div id="topnav" role="contentinfo">
+        <a href="#">» 邮件订阅每日最新团购</a> | <a href="#">  » 邀请好友赠送10个积分</a>      </div>
+      <h1><img src="images/logo2.png" height="50" alt="Tuanao.com" /> </h1>
+      
+      <div id="chcity">
+       <div class="guides">
+                <div class="city">
+                    <h2>成都</h2>
+                </div>
+                <div id="guides-city-change" class="change">切换城市</div>
+                <div id="guides-city-list" class="city-list">
+                    <ul>
+                    <li><a href="beijing.html">北京</a></li><li><a href="shanghai.html">上海</a></li><li><a href="guangzhou.html">广州</a></li><li><a href="shenzhen.html">深圳</a></li><li><a href="hangzhou.html">杭州</a></li><li><a href="nanjing.html">南京</a></li><li><a href="wuhan.html">武汉</a></li><li class="current"><a href="chengdu.html">成都</a></li><li><a href="tianjin.html">天津</a></li><li><a href="xian.html">西安</a></li><li><a href="fuzhou.html">福州</a></li><li><a href="chongqing.html">重庆</a></li><li><a href="xiamen.html">厦门</a></li><li><a href="qingdao.html">青岛</a></li><li><a href="dalian.html">大连</a></li>                    </ul>
+                    <div class="other"><a href="maillist/subscribe/new.html">其他城市？</a></div>
+                </div>
+            </div></div><!--change city end-->
+      </div>
+    <div id="nav" role="navigation">
+      <div class="hlist">
+        <!-- main navigation: #nav_main -->
+        <ul>
+          <li><a href="../index.html">今日团购</a></li>
+          <li><a href="../07_layouts_advanced_2/fullpage_3col.html">明日团购</a></li>
+          <li><a href="flexible_grids2.html">往日团购</a></li>
+          <li><a href="flexible_grids2.html">同城团购</a></li>
+        </ul>
+       <span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="@">登录</a>&nbsp;&nbsp;<a href="@">注册</a></span>      </div>
+    </div>
+   <!-- begin: #col1 - first float column -->
+<div id="col1" role="complementary">
+  <div class="twoColFixLt"> <div id="container">
+      <h1 class="ptitle"><span >今日团购</span>：<%= @product.title %></h1>
+      <div id="sidebar1">
+        <div class="dbox">
+          <div class="buy">
+            <table width="100%" border="0">
+              <tr>
+                <td width="46%" height="90" align="right"><span class="price"><%=number_to_currency(@product.now_price)%></span></td>
+                <td width="54%"><form action="/welcome/add_to_cart/<%=@product.id%>" method="post">
+                    <%= image_submit_tag "/images/bt_buy.gif" %>
+                    <%= tag(:input, :type => "hidden", :name =>request_forgery_protection_token.to_s, :value =>form_authenticity_token) %> </form>                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="price_list"><div class="content">
+              <table width="100%" border="0" align="center">
+                <tr align="center" height="30">
+                  <td>原价</td>
+                  <td>折扣</td>
+                  <td>节省金额</td>
+                </tr>
+                <tr align="center">
+                  <td><strong><%=number_to_currency(@product.original_price)%></strong>元 </td>
+                  <td> <%=@product.discount%>折 </td>
+                  <td> <%=number_to_currency(@product.save_price)%>元 </td>
+                </tr>
+              </table>
+            </div></div>
+        </div>
+        <div class="dbox"><div class="content">
+            <h3>剩余时间</h3>
+            <div class="time">
+              <table width="100%">
+                <tr class="show" align="center"><td width="33%"><em id="RemainH">&nbsp;</em></td><td width="34%"><em id="RemainM">&nbsp;</em></td><td width="33%"><em id="RemainS">&nbsp;</em></td></tr>
+                <tr align="center"><td>小时</td><td>分钟</td><td>秒</td></tr>
+              </table>
+            </div>
+          </div></div>
+        <div class="dbox">
+  <style type="text/css">
+  .sall_status .slider {
+	background-image: url(images/bg_poll1.gif);
+	background-repeat: no-repeat;
+	height: 22px;
+	width:  <%= 0.50 %>;
+	background-position: right;
+	margin-left:12px;
+}
+.sall_status .scroll {
+	width: 100%;
+	background-image: url(images/scroll.png);
+	background-position: -160px;
+	background-repeat: no-repeat;
+}
+  </style>
+          <div class="content"><div class="sall_status">
+              <h3><strong><%=@product.sold_count%></strong>人已购买</h3>
+              <div class="slider"></div>
+              <div class="scroll"><img src="images/scroll3.png" width="100%"/></div>
+              <div class="discount">
+                <div>0</div>
+                <div class="distop"><%=@product.base_count%></div>
+              </div>
+              <p><br/>团购的最低团购人数是: <%=@product.base_count%>人</p>
+            </div>
+          </div></div>
+        <!-- end #sidebar1 --></div>
+      <div id="mainContent">
+        <div class="img"><IMG src="<%=@product.picture%>" width="440"></div>
+        <h2><%=@product.summary%></h2>
+
+        <!-- end #mainContent --></div>
+      <%= render :partial=>'layouts/share' %>
+      <!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats --><br class="clearfloat" />
+      <!-- end #container --></div>
+  </DIV>
+
+  <div class="twoColMain">
+    <div id="container">
+      <div id="mainBody">
+        <table cellspacing="0" cellpadding="0" class="pay_cart">
+          <tbody>
+            <tr>
+              <th>预订内容</th>
+              <th>单价</th>
+              <th>购买数量</th>
+              <th>价格</th>
+            </tr>
+            <tr>
+              <td>恋舍休闲餐厅超值湘菜套餐（6道菜）</td>
+              <td>￥68.0</td>
+              <td><input onblur="javascript:countTotal();" name="buyNum" id="buyNum" value="1" title="购买的数量" type="text" /></td>
+              <td id="totalPriceWithoutDiscount">68元</td>
+            </tr>
+            <tr>
+              <td colspan="3">    总价：</td>
+              <td id="totalPrice">68元</td>
+            </tr>
+          </tbody>
+        </table>
+<p>&nbsp;</p>
+      </div>
+      <div id="mainSide"><div class="centent">
+          <%=@product.contact%>
+        </div></div>
+    </div></div>
+
+</div></div>
+<!-- end: #col1 -->
+<!-- begin: #col3 static column -->
+<div id="col3" role="main">
+  <div id="col3_content" class="clearfix">
+   <!--side bar start-->
+     <div class="side_whant"> 
+      <form action="/feedbacks" class="new_feedback" id="new_feedback" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="XlW05Q7GzrYSQ/24F7RI6LW6OTE0+3lX71uYC35N5aQ=" /></div> 
+      <p> 
+        <label for="feedback_name">您的称呼</label> 
+        <input id="feedback_name" name="feedback[name]" size="30" type="text" /> 
+      </p> 
+      <p> 
+        <label for="feedback_contact">联系方式</label> 
+        <input id="feedback_contact" name="feedback[contact]" size="30" type="text" /><br/> 
+      </p> 
+      <p> 
+        <label for="feedback_message">反馈内容</label> 
+        <textarea cols="25" id="feedback_message" name="feedback[message]" rows="4"></textarea> 
+      </p> 
+      <p> 
+        <input id="feedback_submit" name="commit" type="submit" value="提  交" /> 
+      </p> 
+    </form> 
+    </div> 
+    
+    <!-- A collection of web search results in the search control -->
+<div class="gsc-results gsc-webResult">
+
+  <!-- A single web result in the search control -->
+  <div class="gsc-result gsc-webResult">
+
+    <!-- A single web result, full structure defined below -->
+    <div class="gs-result gs-webResult"></div>
+  </div>
+  ...</div>
+
+<!-- Similar pattern for local, blog, etc. -->
+<div class="gsc-results gsc-localResult"></div>
+<div class="gsc-results gsc-blogResult"></div>
+    
+      <!--side bar end-->
+  </div>
+  <div id="ie_clearing">&nbsp;</div>
+  <!-- End: IE Column Clearing -->
+</div>
+<!-- end: #col3 -->
+
+
+<!--计时器-->
+<script language="JavaScript">
+  var overDate = 1272800004000;//截止时间
+  var Ntime=1272026099000;
+  var NowTime = new Date(Ntime);
+  var EndTime= new Date(overDate);
+  function GetRTime(){
+    NowTime = new Date();
+    var nMS=EndTime.getTime() - NowTime.getTime();
+    var nD=Math.floor(nMS/(1000 * 60 * 60 * 24))*24;
+    var nH=Math.floor(nMS/(1000*60*60)) % 24+nD;
+    var nM=Math.floor(nMS/(1000*60)) % 60;
+    var nS=Math.floor(nMS/1000) % 60;
+    var nMS=Math.floor(nMS/100) % 10;
+    if(nD>= 0){
+      //document.getElementById("RemainD").innerHTML=nD;
+      document.getElementById("RemainH").innerHTML=nH;
+      document.getElementById("RemainM").innerHTML=nM;
+      document.getElementById("RemainS").innerHTML=nS;
+    }
+    else {
+      //document.getElementById("CountMsg").innerHTML="<dt>已过期！</dt>";
+      document.getElementById("RemainH").innerHTML=0;
+      document.getElementById("RemainM").innerHTML=0;
+      document.getElementById("RemainS").innerHTML=0;
+    }
+    setTimeout("GetRTime()",100);
+  }
+  $(document).ready(function(){
+    GetRTime();
+  });
+</script>
+
+
+    <!-- begin: #foot -->
+     <div id="foot">
+    <div id="ft">
+        <p class="contact"><a href="feedback.html">意见反馈</a></p>
+        <ul class="cf">
+            <li class="col">
+                <h3>用户帮助</h3>
+                <ul class="sub-list">
+                    <li><a href="http://www.meituan.com/learn">玩转美团</a></li>
+                    <li><a href="help/faq.html">常见问题</a></li>
+                </ul>
+            </li>
+            <li class="col">
+                <h3>获取更新</h3>
+                <ul class="sub-list">
+                    <li><a href="maillist/subscribe/chengdu.html">邮件订阅</a></li>
+                    <li><a href="http://t.sina.com.cn/meituan" target="_blank">美团新浪微博</a></li>
+                    <li><a href="http://www.douban.com/group/meituan/" target="_blank">美团豆瓣小组</a></li>
+                    <li><a href="feed/chengdu" target="_blank">RSS订阅</a></li>
+                </ul>
+            </li>
+            <li class="col">
+                <h3>商务合作</h3>
+                <ul class="sub-list">
+                    <li><a href="feedback/seller.html">提供团购信息</a></li>
+                </ul>
+            </li>
+            <li class="col">
+                <h3>公司信息</h3>
+                <ul class="sub-list">
+                    <li><a href="about.html">关于美团</a></li>
+                    <li><a href="about/press.html">媒体报道</a></li>
+                    <li><a href="about/job.html">加入我们</a></li>
+                    <li><a href="about/privacy.html">隐私声明</a></li>
+                </ul>
+            </li>
+            <li class="col end">
+                    <div class="logo-footer">
+                        <a href="www.meituan.html"><img src="images/logo.png" alt="tuanao.com" height="50"/></a>                    </div>
+            </li>
+        </ul>
+    </div>
+</div> <!--end foot-->
+  </div>
+</div>
+<!-- full skiplink functionality in webkit browsers -->
+<script src="js/yaml-focusfix.js" type="text/javascript"></script>
+<!-- change city -->
+<script type="text/javascript" src="javascripts/yui/2.6.0/build/utilities/utilities.js" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8" src="javascripts/core.js"></script>
+<script type="text/javascript" charset="utf-8" src="javascripts/app-deal.js"></script>
+<script type="text/javascript" src="javascripts/yui/2.6.0/build/container/container-min.js" charset="utf-8"></script>
+<script type="text/javascript">
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+  })();
+</script>
+<script type="text/javascript" charset="utf-8" src="javascripts/app-misc.js"></script><script>
+YAHOO.util.Event.onDOMReady(function(){
+    MT.app.Subscribe.init();});
+</script>
+</body>
+</html>

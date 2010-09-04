@@ -1,0 +1,28 @@
+<script language="javascript">
+  $(document).ready(function(){
+    //添加表单验证
+    $("#loginForm").validate();
+  });
+</script>
+<% if flash[:notice] %>
+  <div class="warning"><%=flash[:notice] %></div>
+<% end %>
+<div class="main_side">
+  <% form_tag session_path,:class=>"yform", :id=>'loginForm',:role=>"application" do -%>
+    <div class="head"><h2 style="color:#666;font-size: 1.4em;">用户登录</h2></div>
+    <p><label for="login">登录名：</label>
+      <%= text_field_tag 'login',nil,:class=>'required' %></p>
+    <p><label for="password">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+      <%= password_field_tag 'password',nil,:class=>"required"%>
+      <span><%=link_to "忘记密码了?","/account/forget_password" %></span>
+    </p>
+    <p>
+      <%= check_box_tag 'remember_me' %>下次自动登录</p>
+
+    <p><%= submit_tag '登 录' %></p>
+
+    <div style="float: right; padding: 20px;margin:-100px 40px 0px 20px;"><a href="/signup">新用户点此注册</a></div>
+  <% end -%>
+    
+</div>
+

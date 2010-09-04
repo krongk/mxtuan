@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>成都美享团</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/stylesheets/layout.css" type="text/css" />
+     <link rel="stylesheet" href="/stylesheets/style.css" type="text/css" />
+    <meta name="description" content="美享团/成都美享团是一个在线限时团购网站，每天都有一家精选的成都的餐饮行业特色商家提供最心动的价格。" />
+    <meta name="keywords" content="成都美享团,成都,团购,成都美食" />
+    <%= javascript_include_tag 'jquery','jquery.validate','jquery.metadata','application' %>
+    <script language="javascript">
+      <% if controller.action_name =="today" -%>
+          //在today页面添加计时器启动方法
+          $(document).ready(function(){ GetRTime(); });
+      <% end  -%>
+    </script>
+  </head>

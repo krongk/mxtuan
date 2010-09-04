@@ -1,0 +1,32 @@
+<h3>意见反馈列表</h3>
+<div class="content1">
+<table>
+  <tr>
+    <th colspan="2">菜单</th>
+    <th>编号</th>
+    <th>称呼</th>
+    <th>联系方式</th>
+    <th>留言信息</th>
+    <th>留言时间</th>
+    <th>是否确认</th>
+    <th>确认内容</th>
+  </tr>
+
+<% @feedbacks.each do |feedback| %>
+  <tr>
+    <td><%= link_to '修改', edit_feedback_path(feedback) %></td>
+    <td><%= link_to '删除', feedback, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%=h feedback.id %></td>
+    <td><%=h feedback.name %></td>
+    <td><%=h feedback.contact %></td>
+    <td><%=h feedback.message %></td>
+    <td><%=h format_datetime(feedback.created_at) %></td>
+    <td><%=h format_yes_or_no(feedback.is_check) %></td>
+     <td><%=h format_yes_or_no(feedback.note) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%=link_to "返回主菜单", "/admin"%>
+</div>

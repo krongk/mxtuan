@@ -1,0 +1,65 @@
+<div class="main_side">
+ <div class="ROUND-BOX"><div class="TU"></div><div class="TTU"></div><div class="CU">
+  <h3>第二步：支付订单</h3><hr/>
+  <table width="100%" >
+  <tr>
+    <th width="192" height="45" align="center" valign="middle" bgcolor="#ddd">用户</th>
+    <th width="217" align="center" valign="middle" bgcolor="#ddd"> 需要支付金额</th>
+  </tr>
+  <tr>
+    <td height="51" align="center" valign="middle"><%= @order.user.login %>  </td>
+    <td align="center" valign="middle"><%= @order.order_price %>元</td>
+  </tr>
+   <tr>
+    <th colspan="2"  bgcolor="#ddd" height="30">&nbsp;您的手机</th>
+  </tr>
+  <tr>
+    <td colspan="2" >&nbsp;团购成功后，验证码将发送到手机：<%= @order.phone %>，直接凭短信去商家消费。</td>
+  </tr>
+  <tr>
+    <th colspan="2"  bgcolor="#ddd" height="30">&nbsp;请选择支付方式</th>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <div class="biowit">
+	<input name="zhifu" type="radio" value="1" checked/> <img src="http://119.161.209.92/templates/default/images/tenpay.jpg" align="absmiddle" />
+	<input name="zhifu" type="radio" value="2" /> <img src="http://119.161.209.92/templates/default/images/bg_zfb.gif" align="absmiddle" />
+	<input name="zhifu" type="radio" value="3" /> <img src="http://119.161.209.92/templates/default/images/yeepay.jpg" align="absmiddle" />
+     </div>
+    </td>
+  </tr>
+  <tr>
+    <td height="51" align="center" valign="middle">
+ <form action="https://pay3.chinabank.com.cn/Payto" method="post" accept-charset="unicode"><INPUT type="hidden" name="v_mid" value="21701769" > <INPUT type="hidden" name="v_id" value="134566" > <INPUT type="hidden" name="v_url" value="http://www.tuanao.com/today" > <INPUT type="hidden" name="quantity" value="1" > <INPUT type="hidden" name="v_amount" value="55" ><INPUT type="image" src="/images/pay4.gif" ></form>
+    </td>
+    <td align="center" valign="middle">
+      
+ <!--alipay-->
+<% payment_service_for 'payment code', ActiveMerchant::Billing::Integrations::Alipay::ACCOUNT,
+                            :service => :alipay,
+                            :html => { :id => 'payment-form', :method => :get } do |service| %>
+  <% service.discount @order.product.discount %>
+  <% service.price  @order.product.now_price %>
+  <% service.quantity 1 %>
+  <% service.seller :email => ActiveMerchant::Billing::Integrations::Alipay::EMAIL %>
+  <%# service.buyer :id => 'buyer_id' %>
+  <% service.notify_url url_for(:only_path => false, :action => 'notify') %>
+  <% service.return_url url_for(:only_path => false, :action => 'done') %>
+  <% service.show_url url_for(:only_path => false, :action => 'show') %>
+  <% service.body '团奥网今日团品1件' %>
+  <% service.charset "utf-8" %>
+  <% service.service ActiveMerchant::Billing::Integrations::Alipay::Helper::CREATE_PARTNER_TRADE_BY_BUYER %>
+  <% service.payment_type 1 %>
+  <% service.subject @order.product.title %>
+  <% service.agent ActiveMerchant::Billing::Integrations::Alipay::ACCOUNT %>
+  <% service.logistics :type => 'EXPRESS', :fee => 5, :payment => 'BUYER_PAY' %>
+  <% service.receive :name => '宋学江', :address => '成都市火车南站东路69号美丽南庭3-1128号', :zip => '610041', :phone => '15928661802', :mobile => '15928661802' %>
+  <% service.sign %>
+<% end %>
+<input src="/images/pay2-1.gif?1273538347" type="image" onclick="document.getElementById('payment-form').submit();;"/>
+      
+    </td>
+  </tr>
+</table>
+</div><div class="BBU"></div><div class="BU"></div></div>
+  </div>

@@ -1,0 +1,33 @@
+<p>
+  <b>Name:</b>
+  <%=h @seller.name %>
+</p>
+
+<p>
+  <b>Contact:</b>
+  <%=h @seller.contact %>
+</p>
+
+<p>
+  <b>Info:</b>
+  <%=h @seller.info %>
+</p>
+
+<p>
+  <b>Is front:</b>
+  <%=h @seller.is_front %>
+</p>
+
+<p>
+  <b>Is checked:</b>
+  <%=h @seller.is_checked %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%=h @seller.note %>
+</p>
+
+
+<%= link_to 'Edit', edit_seller_path(@seller) %> |
+<%= link_to 'Back', sellers_path %>

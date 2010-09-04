@@ -1,0 +1,59 @@
+h1. activemerchant_patch_for_china
+
+*Please note! This active_merchant patch is written by nouse.*
+
+This plugin is an active_merchant patch for china online payment platform, now it supports alipay (支付宝), 99bill (快钱) and tenpay (财付通).
+
+**************************************************************************
+
+h2. Install
+
+install active_merchant and activemerchant_patch_for_china as plugins:
+
+<pre><code>
+script/plugin install git://github.com/Shopify/active_merchant.git
+script/plugin install git://github.com/flyerhzm/activemerchant_patch_for_china.git
+</code></pre>
+
+install activemerchant and activemerchant_patch_for_china as gems:
+
+<pre><code>
+sudo gem install activemerchant
+sudo gem install activemerchant_patch_for_china
+</code></pre>
+
+
+
+**************************************************************************
+
+h2. Configuration
+
+if you install active_merchant and activemerchant_patch_for_china as rails plugins, then define plugin load order in <code>config/environment.rb</code> to promise activemerchant_patch_for_china is loaded after active_merchant.
+
+<pre><code>
+config.plugins = [:all, :active_merchant, :activemerchant_patch_for_china]
+</code></pre>
+
+if you install activemerchant and activemerchant_patch_for_china as gems, then define in <code>config/environment.rb</code>
+
+<pre><code>
+config.gem "activemerchant", :lib => "active_merchant"
+config.gem "activemerchant_patch_for_china", :lib => false
+
+
+require 'active_merchant'
+require 'active_merchant/billing/integrations/action_view_helper'
+
+ActionView::Base.send(:include, ActiveMerchant::Billing::Integrations::ActionViewHelper)
+</code></pre>
+
+**************************************************************************
+
+h2. Usage
+
+"Alipay (支付宝)":http://wiki.github.com/flyerhzm/activemerchant_patch_for_china/alipay
+
+**************************************************************************
+
+
+Copyright (c) 2009 [nouse], released under the MIT license

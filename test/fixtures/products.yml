@@ -1,0 +1,39 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  total_count: 1
+  sold_count: 1
+  original_price: 1.5
+  discount: 1.5
+  now_price: 1.5
+  save_price: 1.5
+  started_at: 2010-04-23 10:07:17
+  ended_at: 2010-04-23 10:07:17
+  picture: MyString
+  summary: MyText
+  details: MyText
+  contact: MyText
+  comment: MyText
+  status: 1
+  is_publish: false
+  is_ok: false
+
+two:
+  title: MyString
+  total_count: 1
+  sold_count: 1
+  original_price: 1.5
+  discount: 1.5
+  now_price: 1.5
+  save_price: 1.5
+  started_at: 2010-04-23 10:07:17
+  ended_at: 2010-04-23 10:07:17
+  picture: MyString
+  summary: MyText
+  details: MyText
+  contact: MyText
+  comment: MyText
+  status: 1
+  is_publish: false
+  is_ok: false

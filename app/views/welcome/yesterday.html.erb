@@ -1,0 +1,31 @@
+<div id="contenter">
+  <h3>
+    往期团购
+  </h3>
+  <div class="deallist">
+    <ul>
+      <% @products.each do |product| %>
+        <li>
+          <div class="dealtime">
+            <%=h format_datetime(product.started_at) %>
+          </div>
+          <div class="dealphoto">
+            <img src="<%=  product.picture%>" width="180" height="115" />
+          </div>
+          <div class="dealinfo">
+            <div class="dealtitle">
+              <h4><%= product.title[0..60] %></h4>
+            </div>
+            <p class="p1">原价：<%=h number_to_currency(product.original_price) %>   美享价：
+              <span><%=h number_to_currency(product.now_price) %> </span> 折扣：
+              <span><%=h product.discount %></span>折</p>
+            <p></p>
+            <p><span><%=h product.sold_count %></span>人购买</p>
+            <p class="p2"><img src="image/suc.png" />已结束 团购成功 </p>
+          </div>
+        </li>
+      <% end  %>
+    </ul>
+    <%= will_paginate @products %>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<div id="about">
+<h2 align="center">明日团品你来定...</h2>
+<p>团奥网运营模式：每天推出一个折扣足够低的精品团购项目，限时限量，过期不候。团奥网致力于为大家整合超低价超实惠商品
+  让您享受秒杀的体验，团购的快乐！我们的商品是什么？您先说了算。请在以下即将推出的团品中选择你最想要购买的!
+</p>
+<div class="subcolumns equalize box-top">
+  <div class="c33l">
+    <div class="subcl">
+      <!-- Insert your subtemplate content here -->
+      <h6>即将推出团品-1 </h6>
+      <p><img src="images/tomorrow-1.jpg" width="270px"/></p>
+      <a href="#" class="hideme">&rarr;选择这品</a>
+      <div id="product1" style="display:none; position:absolute; float:left;margin:-100px 0 0 0;"><img src="images/right.png"/></div>
+    </div>
+  </div>
+  <div class="c33l">
+    <div class="subc">
+      <!-- Insert your subtemplate content here -->
+      <h6>即将推出团品-2 </h6>
+       <p><img src="images/tomorrow-2.jpg" width="270px"/></p>
+      <a href="#" class="hideme">&rarr;选择这品</a>
+      <div id="product2" style="display:none; position:absolute; float:left;margin:-100px 0 0 0;"><img src="images/right.png"/></div>
+    </div>
+  </div>
+  <div class="c33r">
+    <div class="subcr">
+      <!-- Insert your subtemplate content here -->
+      <h6>即将推出团品-3</h6>
+     <p><img src="images/tomorrow-3.jpg" width="270px"/></p>
+      <a href="#" class="hideme">&rarr;选择这品</a>
+      <div id="product3" style="display:none; position:absolute; float:left;margin:-100px 0 0 0;"><img src="images/right.png"/></div>
+    </div>
+  </div>
+</div>
+<h3 class="hideme">Summing up</h3>
+<div class="subcolumns equalize no-ie-padding box-bottom">
+  <div class="c33l">
+    <div class="subcl"><a href="javascript:void(0);" class="noprint" onclick="choose_product(1);">&rarr; 选择这品<span class="hideme"> about Topic One</span>.</a></div>
+  </div>
+  <div class="c33l">
+    <div class="subc"><a href="javascript:void(0);" class="noprint" onclick="choose_product(2);">&rarr;  选择这品<span class="hideme"> about Topic Two</span>.</a></div>
+  </div>
+  <div class="c33r">
+    <div class="subcr"><a href="javascript:void(0);" class="noprint" onclick="choose_product(3);">&rarr;  选择这品<span class="hideme"> about Topic Tree</span>.</a></div>
+  </div>
+</div>
+</div>
+<script language="javascript">
+function choose_product(n){
+  var p="product"+n;
+  p_item = document.getElementById(p);
+  for(var i=1;i<4;i++){
+   document.getElementById("product"+i).style.display="none";
+   document.getElementById("product"+i).style.position="absolute";
+  }
+  p_item.style.display="block";
+}
+</script>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  city: 1
+  mail: MyString
+  is_ok: false
+  note: MyString
+
+two:
+  city: 1
+  mail: MyString
+  is_ok: false
+  note: MyString

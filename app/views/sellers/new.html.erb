@@ -1,0 +1,30 @@
+<script language="javascript">
+  $(document).ready(function(){
+    //添加表单验证
+    $("#sellerForm").validate();
+  });
+</script>
+<div class="main_side">
+  <div class="head"><h2>提供团购信息</h2></div>
+  <div>
+    <p class="notice">特别欢迎优质商家、淘宝大卖家提供团购信息。</p>
+    <% form_for(@seller,:html=>{:id=>'sellerForm'}) do |f| %>
+      <%= f.error_messages %>
+      <p>
+        <%= f.label :name,"您的称呼" %>：
+        <%= f.text_field :name,:class=>'required' %>
+      </p>
+      <p>
+        <%= f.label :contact,"联系方式" %>：
+        <%= f.text_field :contact,:class=>'required' %><span>&nbsp;&nbsp;&nbsp;&nbsp;请留下您的手机、QQ号或邮箱，以方便联系</span>
+      </p>
+      <p>
+        <%= f.label :infof,"团购信息:" %><br />
+        <%= f.text_area :info,:cols=>65,:rows=>8,:class=>'required' %>
+      </p>
+      <p>
+        <%= f.submit '提 交' %>
+      </p>
+    <% end %>
+  </div>
+</div>

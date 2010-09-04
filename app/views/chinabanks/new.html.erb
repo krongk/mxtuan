@@ -1,0 +1,106 @@
+<h1>New chinabank</h1>
+<h1>Chinabank#seed</h1>
+
+<!--
+ * ====================================================================
+ *
+ *                Send.php 由网银在线技术支持提供
+ *
+ *  本页面接收来自上页所有订单信息,并提交支付表单信息到网线在线支付平台....
+ *
+ *
+ * ====================================================================
+-->
+<!DOCTYPE HTML PUBLIC "-#W3C#DTD HTML 4.01 Transitional#EN">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <title>在线支付接口RubyonRails版</title>
+
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+  </head>
+  <body onLoad="javascript:document.E_FORM.submit()">
+    <%
+    #****************************************
+    v_mid = '21701769';					# 商户号，这里为测试商户号1001，替换为自己的商户号(老版商户号为4位或5位,新版为8位)即可
+    v_url = 'http://localhost/chinabank/Receive';	# 请填写返回url,地址应为绝对路径,带有http协议
+    key   = 'ilovelandyshesbirth19820501';		# 如果您还没有设置MD5密钥请登陆我们为您提供商户后台，地址：https://merchant3.chinabank.com.cn/
+    # 登陆后在上面的导航栏里可能找到“B2C”，在二级导航栏里有“MD5密钥设置”
+    # 建议您设置一个16位以上的密钥或更高，密钥最多64位，但设置16位已经足够了
+    #****************************************
+
+    #判断是否有传递订单号
+    s =params["v_oid"]
+    s = s.strip if s!=nil
+    if s!=""
+      v_oid = s
+    else
+      #订单号，建议构成格式 年月日-商户号-小时分钟秒
+      date=DateTime.now.strftime("%Y%m%d")
+      time=DateTime.now.strftime("%H%M%S")
+      v_oid = "#{date}-#{v_mid}-#{time}"
+    end
+
+    v_amount = params['v_amount']  #支付金额
+    v_moneytype = "CNY"              #币种
+
+    text = "#{v_amount}.#{v_moneytype}.#{v_oid}.#{v_mid}.#{v_url}.#{key}"  #md5加密拼凑串,注意顺序不能变
+    #require 'md5'
+    v_md5info = Digest::MD5.hexdigest(text).upcase    #md5函数加密并转化成大写字母
+
+    remark1 = params["remark1"]  #备注字段1
+    remark2 = params["remark2"]  #备注字段2
+=begin
+v_rcvname   = trim(params['v_rcvname'])  ;		# 收货人
+v_rcvaddr   = trim(params['v_rcvaddr'])  ;		# 收货地址
+v_rcvtel    = trim(params['v_rcvtel'])   ;		# 收货人电话
+v_rcvpost   = trim(params['v_rcvpost'])  ;		# 收货人邮编
+v_rcvemail  = trim(params['v_rcvemail']) ;		# 收货人邮件
+v_rcvmobile = trim(params['v_rcvmobile']);		# 收货人手机号
+
+v_ordername   = trim(params['v_ordername'])  ;	# 订货人姓名
+v_orderaddr   = trim(params['v_orderaddr'])  ;	# 订货人地址
+v_ordertel    = trim(params['v_ordertel'])   ;	# 订货人电话
+v_orderpost   = trim(params['v_orderpost'])  ;	# 订货人邮编
+v_orderemail  = trim(params['v_orderemail']) ;	# 订货人邮件
+v_ordermobile = trim(params['v_ordermobile']);	# 订货人手机号
+=end
+  %>
+
+    <!--以下信息为标准的 HTML 格式 + ASP 语言 拼凑而成的 网银在线 支付接口标准演示页面 无需修改-->
+
+    <form method="post" name="E_FORM" action="https://Pay3.chinabank.com.cn/PayGate">
+      <input type="input" name="v_mid"         value="<%=v_mid%>">
+      <input type="input" name="v_oid"         value="<%=v_oid%>">
+      amount:<%=v_amount%><input type="input" name="v_amount"      value="<%=v_amount%>">
+      <input type="input" name="v_moneytype"   value="<%=v_moneytype%>">
+      <input type="input" name="v_url"         value="<%=v_url%>">
+      <input type="input" name="v_md5info"     value="<%=v_md5info%>">
+
+      <!--以下几项项为网上支付完成后，随支付反馈信息一同传给信息接收页 -->
+
+      <input type="input" name="remark1"       value="<%=remark1%>">
+      <input type="input" name="remark2"       value="<%=remark2%>">
+
+
+
+      <!--以下几项只是用来记录客户信息，可以不用，不影响支付
+      <input type="hidden" name="v_rcvname"      value="<?php echo v_rcvname;?>">
+      <input type="hidden" name="v_rcvtel"       value="<?php echo v_rcvtel;?>">
+      <input type="hidden" name="v_rcvpost"      value="<?php echo v_rcvpost;?>">
+      <input type="hidden" name="v_rcvaddr"      value="<?php echo v_rcvaddr;?>">
+      <input type="hidden" name="v_rcvemail"     value="<?php echo v_rcvemail;?>">
+      <input type="hidden" name="v_rcvmobile"    value="<?php echo v_rcvmobile;?>">
+
+      <input type="hidden" name="v_ordername"    value="<?php echo v_ordername;?>">
+      <input type="hidden" name="v_ordertel"     value="<?php echo v_ordertel;?>">
+      <input type="hidden" name="v_orderpost"    value="<?php echo v_orderpost;?>">
+      <input type="hidden" name="v_orderaddr"    value="<?php echo v_orderaddr;?>">
+      <input type="hidden" name="v_ordermobile"  value="<?php echo v_ordermobile;?>">
+      <input type="hidden" name="v_orderemail"   value="<?php echo v_orderemail;?>">
+      -->
+    </form>
+
+  </body>
+</html>
+

@@ -1,0 +1,101 @@
+<% #encoding: utf-8 %>
+<div id="todayshow">
+  <div id="headshow">
+    <div class="headsider">
+      <p class="pricea">原价：<%=number_to_currency(@product.original_price)%>
+      </p>
+      <p class="save">折扣：<%=@product.discount%>折
+      </p>
+      <div class="buy">
+        <% if @product.sold_count < @product.total_count %>
+          <form action="/welcome/add_to_cart/<%=@product.id%>" method="post">
+             <span class="priceb">现价</span>
+            
+            <%= image_submit_tag "/image/buy.png", :class=>'button' %>
+             <p class="buyhot"><%=number_to_currency(@product.now_price)%></p>
+            <%= tag(:input, :type => "hidden", :name =>request_forgery_protection_token.to_s, :value =>form_authenticity_token) %>
+          </form>
+        <% else %>
+          <img src="/image/bt_expirent.png"/>
+        <% end %>
+
+      </div>
+      <div class="timer">
+        <p class="timeleft">剩余时间:</p>
+        <div class="timeshow">
+          <p class="hour"><em id="RemainH">&nbsp;</em>小时</p>
+          <p class="min"><em id="RemainM">&nbsp;</em>分</p>
+          <p class="sencond"><em id="RemainS">&nbsp;</em></p>
+        </div>
+      </div>
+      <div class="buyingbox">
+        <% if @product.sold_count < @product.base_count %>
+          <p class="suc">团购征集中!</p>
+          <p class="num"><%=@product.sold_count%>人已购买</p>
+          <p class="howget">最低团购人数: <%=@product.base_count%>人</p>
+        <% elsif @product.sold_count < @product.total_count %>
+          <p class="suc">团购已成功！</p>
+          <p class="num"><%=@product.sold_count%>人已购买</p>
+          <p class="howget"> 还可继续购买。  数量有限,下单要快</p>
+        <% else %>
+          <p class="suc">卖光了!</p>
+          <p class="num">共<strong><%=@product.sold_count%></strong>人购买</p>
+          <p class="howget"> 本次商品已卖光。  敬请期待下次团购</p>
+        <% end %>
+
+      </div>
+    </div>
+    <div class="photo">
+      <img src="<%=@product.picture%>" width="490" height="300" />
+    </div>
+    <h2 class="title">
+      <%#@product.summary%>
+    </h2>
+  </div>
+  
+  <div id="mainfood">
+    <h3>
+      本单详情
+    </h3>
+    <div class="maininfo">
+        <p><%=@product.details%></p>
+        <p><%=@product.comment%></p>
+	
+    </div>
+    <div class="shopinfo">
+      <p> <%=@product.contact%></p>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+</div>
+
+<!--计时器-->
+<script language="JavaScript">
+  var overDate = <%=(@product.ended_at.to_i+24*60*60)*1000%>;//截止时间
+  var Ntime= <%=Time.now.to_i*1000%>;
+  var NowTime = new Date(Ntime);
+  var EndTime= new Date(overDate);
+  function GetRTime(){
+    NowTime = new Date();
+    var nMS=EndTime.getTime() - NowTime.getTime();
+    var nD=Math.floor(nMS/(1000 * 60 * 60 * 24))*24;
+    var nH=Math.floor(nMS/(1000*60*60)) % 24+nD;
+    var nM=Math.floor(nMS/(1000*60)) % 60;
+    var nS=Math.floor(nMS/1000) % 60;
+    var nMS=Math.floor(nMS/100) % 10;
+    if(nD>= 0){
+      //document.getElementById("RemainD").innerHTML=nD;
+      document.getElementById("RemainH").innerHTML=nH;
+      document.getElementById("RemainM").innerHTML=nM;
+      document.getElementById("RemainS").innerHTML=nS;
+    }
+    else {
+      //document.getElementById("CountMsg").innerHTML="<dt>已过期！</dt>";
+      document.getElementById("RemainH").innerHTML=0;
+      document.getElementById("RemainM").innerHTML=0;
+      document.getElementById("RemainS").innerHTML=0;
+    }
+    setTimeout("GetRTime()",100);
+  }
+</script>
+

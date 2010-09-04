@@ -1,0 +1,54 @@
+<DIV id="maillist" class="main_side">
+  <DIV id="content">
+    <DIV class="box">
+      <DIV class="box-top"></DIV>
+      <DIV class="box-content welcome">
+        <DIV class="head">
+          <H2>邮件订阅</H2>
+        </DIV>
+        <DIV class="sect">
+          <DIV class="lead">
+            <H3>把你所在城市每天最新的精品团购信息发到您的邮箱。</H3>
+          </DIV>
+          <DIV class="enter-address">
+            <P>立即邮件订阅每日团购信息，不错过每一天的惊喜。</P>
+            <DIV class="enter-address-c">
+              <% form_for(@email,:html=>{:id=>"enter-address-form"}) do |f| %>
+                <%= f.error_messages %>
+                <div class="mail">
+                  <%= f.label :mail,"邮件地址:" %>
+                  <%= f.text_field :mail,:height=>"30",:onblur=>"isEmail(this.value);" %>
+                  <SPAN class="tip">请放心，我们和您一样讨厌垃圾邮件</SPAN>
+                </div>
+                <div class="city">
+                  <LABEL id="enter-address-city-label">选择您的城市：</LABEL>
+                  <SELECT name="email[city]" class="f-city" style="display:">
+                    <OPTION value="59" selected="selected">成都</OPTION><OPTION value="1">北京</OPTION><OPTION value="10">上海</OPTION><OPTION value="20">广州</OPTION><OPTION value="30">深圳</OPTION><OPTION value="40">天津</OPTION><OPTION value="42">西安</OPTION><OPTION value="44">福州</OPTION><OPTION value="45">重庆</OPTION><OPTION value="50">杭州</OPTION><OPTION value="55">南京</OPTION><OPTION value="57">武汉</OPTION><OPTION value="60">青岛</OPTION><OPTION value="62">厦门</OPTION><OPTION value="65">大连</OPTION>                                </SELECT>
+                  <INPUT id="enter-address-city" autocomplete="off" name="cityname" class="f-input f-cityname" type="text" value="" style="display:none">
+                  <!--<input type="submit" onclick="return false;" value="隐藏下面提交按钮的黑色边框，不要删" style="width:0;height:0;" />-->
+                  &nbsp;&nbsp;
+                  <%= f.submit '订 阅' %>
+                  <SPAN class="tip"><A id="subscribe-other" href="#">目前系统只支持以上所在的城市！</A></SPAN>
+                </div>
+              <% end %>
+            </DIV>
+            <DIV class="clear"></DIV>
+          </DIV>
+          <DIV class="intro">
+            <P>每日精品团购包括：</P>
+            <P>选择优质特色商家，提供吃、喝、玩、游、乐等各种丰富内容。</P>
+          </DIV>
+        </DIV>
+      </DIV>
+      <DIV class="box-bottom"></DIV>
+    </DIV>
+  </DIV>
+</DIV>
+<SCRIPT LANGUAGE=javascript RUNAT=Server>
+function isEmail(strEmail) {
+if (strEmail.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1)
+return true;
+else
+alert("你的邮件输入有误哦，请检查一下！");
+}
+</SCRIPT>

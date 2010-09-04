@@ -1,0 +1,94 @@
+<div class="content2">
+<h1>添加新团品</h1>
+<a name="top"></a><%= link_to '返回', products_path %>
+<% form_for(@product) do |f| %>
+  <%= f.error_messages %>
+  <fieldset class="set">
+    <legend class="title">基本信息</legend>
+    <p>
+      <%= f.label :title,"本次团购标题" %><br />
+      <%= f.text_field :title,:size=>117 %>
+    </p>
+    <table width="780px" border="0">
+      <tr>
+        <td width="200px">
+          <%= f.label :total_count,"团品总数" %><br />
+          <%= f.text_field :total_count %>
+        </td>
+        <td>
+          <%= f.label :base_count,"团购基数" %><br />
+          <%= f.text_field :base_count %>
+        </td>
+        <td rowspan="3">
+          <p>  <%= f.label :started_at,'开卖时间' %><br />
+      <%= f.datetime_select :started_at,:use_month_numbers=>:true %>
+          </p><p>
+         <%= f.label :ended_at,'结束时间' %><br />
+         <%= f.datetime_select :ended_at,:use_month_numbers=>:true %></p>
+        </td>
+      </tr>
+      <tr>
+        <td width="200px">
+          <%= f.label :original_price,"原价" %><br />
+          <%= f.text_field :original_price %>
+        </td>
+        <td>
+          <%= f.label :discount,"折扣" %><br />
+          <%= f.text_field :discount %>
+        </td>
+      </tr>
+      <tr>
+        <td width="200px">
+          <%= f.label :now_price,'折扣后现价' %><br />
+          <%= f.text_field :now_price %>
+        </td>
+        <td>
+          <%= f.label :save_price,'为你节省了' %><br />
+          <%= f.text_field :save_price %>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+<div>&nbsp;</div>
+<fieldset class="set">
+    <legend class="title">团品描述</legend>
+  <p>
+    <%= f.label :picture,'团品图片路径' %><br />
+    <%= f.text_field :picture,:size=>117 %>
+  </p>
+  <p>
+    <%= f.label :summary,'团品一句话摘要' %><br />
+    <%= fckeditor_textarea("product", "summary", :toolbarSet => 'Simple', :width => '720px', :height => '300px') %>
+  </p>
+
+  <p>
+    <%= f.label :details,'团品详细介绍' %><br />
+    <%= fckeditor_textarea("product", "details", :toolbarSet => 'Simple', :width => '720px', :height => '400px') %>
+  </p>
+  <p>
+    <%= f.label :contact,'商家联系信息' %><br />
+    <%= fckeditor_textarea("product", "contact", :toolbarSet => 'Simple', :width => '720px', :height => '400px') %>
+  </p>
+  <p>
+    <%= f.label :comment,'大众点评' %><br />
+    <%= fckeditor_textarea("product", "comment", :toolbarSet => 'Simple', :width => '720px', :height => '400px') %>
+  </p>
+  <p>
+    <%= f.label :status,"状态：" %><br />
+    <%= f.select :status,[["还未开始上架",0],["团购期，未成功",1],["团购成功，可继续购买",2],["卖光了",3],["团购成功结束",4],["团购失败告终",5],]%>
+    &nbsp;&nbsp;&nbsp;<%= f.label :is_publish,"是否上线" %>：
+    <%= f.check_box :is_publish %>
+      &nbsp;&nbsp;&nbsp;<%= f.label :is_ok,"是否正常" %>:
+    <%= f.check_box :is_ok %>
+  </p>
+  <p>
+   
+  </p>
+  <p>
+    <%= f.submit '填好了，提交！    希望这单能带来好运！' %>
+  </p>
+    </fieldset>
+<% end %>
+<a href="#top">|顶部</a>&nbsp;&nbsp;
+<%= link_to '返回', products_path %>
+</div>

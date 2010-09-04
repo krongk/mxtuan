@@ -1,0 +1,30 @@
+<h1>Listing sellers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Contact</th>
+    <th>Info</th>
+    <th>Is front</th>
+    <th>Is checked</th>
+    <th>Note</th>
+  </tr>
+
+<% @sellers.each do |seller| %>
+  <tr>
+    <td><%=h seller.name %></td>
+    <td><%=h seller.contact %></td>
+    <td><%=h seller.info %></td>
+    <td><%=h seller.is_front %></td>
+    <td><%=h seller.is_checked %></td>
+    <td><%=h seller.note %></td>
+    <td><%= link_to 'Show', seller %></td>
+    <td><%= link_to 'Edit', edit_seller_path(seller) %></td>
+    <td><%= link_to 'Destroy', seller, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New seller', new_seller_path %>

@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+/* import core styles | Basis-Stylesheets einbinden */
+@import url(../yaml/core/base.css);
+@import url(../yaml/screen/forms.css);
+/* import screen layout | Screen-Layout einbinden */
+/*@import url(../yaml/navigation/nav_shinybuttons.css);*/
+@import url(screen/tuanao.css);
+/*@import url(screen/basemod.css);*/
+@import url(screen/content.css);
+
+/*@import url(screen/sidebar.css);*/
+@import url(screen/jQueryForm.css);
+/* import print layout | Druck-Layout einbinden */
+@import url(../yaml/print/print_103_draft.css);

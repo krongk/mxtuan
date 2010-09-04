@@ -1,0 +1,23 @@
+<p>
+  <b>City:</b>
+  <%=h @email.city %>
+</p>
+
+<p>
+  <b>Mail:</b>
+  <%=h @email.mail %>
+</p>
+
+<p>
+  <b>Is ok:</b>
+  <%=h @email.is_ok %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%=h @email.note %>
+</p>
+
+
+<%= link_to 'Edit', edit_email_path(@email) %> |
+<%= link_to 'Back', emails_path %>

@@ -1,0 +1,33 @@
+<h3>商家留言列表</h3>
+<div class="content1">
+<table>
+  <tr>
+    <th colspan="2">菜单</th>
+    <th>编号</th>
+    <th>称呼</th>
+    <th>联系方式</th>
+    <th>留言信息</th>
+    <th>留言时间</th>
+    <th>是否上线</th>
+    <th>是否确认</th>
+  </tr>
+
+<% @sellers.each do |seller| %>
+  <tr>
+    <td><%= link_to '修改', edit_seller_path(seller) %></td>
+    <td><%= link_to '删除', seller, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%=h seller.id %></td>
+    <td><%=h seller.name %></td>
+    <td><%=h seller.contact %></td>
+    <td><%=h seller.info %></td>
+    <td><%=h format_datetime(seller.created_at) %></td>
+    <td><%=h format_yes_or_no(seller.is_front) %></td>
+    <td><%=h format_yes_or_no(seller.is_checked) %></td>
+
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%=link_to "返回主菜单", "/admin"%>
+</div>

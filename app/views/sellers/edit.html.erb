@@ -1,0 +1,36 @@
+<h1>Editing seller</h1>
+
+<% form_for(@seller) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :contact %><br />
+    <%= f.text_field :contact %>
+  </p>
+  <p>
+    <%= f.label :info %><br />
+    <%= f.text_area :info %>
+  </p>
+  <p>
+    <%= f.label :is_front %><br />
+    <%= f.check_box :is_front %>
+  </p>
+  <p>
+    <%= f.label :is_checked %><br />
+    <%= f.check_box :is_checked %>
+  </p>
+  <p>
+    <%= f.label :note %><br />
+    <%= f.text_area :note %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @seller %> |
+<%= link_to 'Back', sellers_path %>

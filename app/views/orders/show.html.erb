@@ -1,0 +1,38 @@
+<p>
+  <b>User:</b>
+  <%=h @order.user %>
+</p>
+
+<p>
+  <b>Product:</b>
+  <%=h @order.product %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%=h @order.quantity %>
+</p>
+
+<p>
+  <b>Discount:</b>
+  <%=h @order.discount %>
+</p>
+
+<p>
+  <b>Order price:</b>
+  <%=h @order.order_price %>
+</p>
+
+<p>
+  <b>Is pay:</b>
+  <%=h @order.is_pay %>
+</p>
+
+<p>
+  <b>Pay type:</b>
+  <%=h @order.pay_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

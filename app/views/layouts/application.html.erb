@@ -1,0 +1,16 @@
+<%=render :file=>'layouts/_head.html.erb'%>
+<body>
+  <div id="main">
+    <div id="mainWrapper">
+      <%=render :partial=>'layouts/menu'%>
+      <div id="content">
+        <%= yield %>
+        <%= yield :side %> <%# only use at /about/faq%>
+        <%=render :partial=>'layouts/sidebar'%>
+      </div>
+      <%=render :partial=>'layouts/footer'%>
+    </div>
+  </div>
+  <div style="display: none;" ><%=render :partial=>'layouts/foot_js'%></div>
+</body>
+</html>

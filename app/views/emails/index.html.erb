@@ -1,0 +1,28 @@
+<h3>邮件列表</h3>
+
+<table>
+  <tr>
+    <th colspan="3">菜单</th>
+     <th width="100px">城市</th>
+    <th width="200px">邮件</th>
+    <th>是否正常</th>
+    <th width="200px">备注</th>
+  </tr>
+
+<% @emails.each do |email| %>
+  <tr>
+    <td><%= link_to '详细', email %></td>
+    <td><%= link_to '编辑', edit_email_path(email) %></td>
+    <td><%= link_to '删除', email, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td align="center"><%=h email.city %></td>
+    <td><%=h email.mail %></td>
+    <td><%=h format_yes_or_no(email.is_ok) %></td>
+    <td><%=h email.note %></td>
+   
+  </tr>
+<% end %>
+</table>
+<%=will_paginate @emails%>
+<br />
+
+<%= link_to '返回主菜单', "/admin" %>
