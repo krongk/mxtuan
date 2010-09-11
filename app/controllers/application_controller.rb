@@ -7,5 +7,5 @@ class ApplicationController < ActionController::Base
   include AuthenticatedSystem
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
-  Encoding.default_internal="UTF-8"
+
 end
