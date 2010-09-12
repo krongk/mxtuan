@@ -2,10 +2,8 @@
 <div id="todayshow">
   <div id="headshow">
     <div class="headsider">
-      <p class="pricea">原价：<%=number_to_currency(@product.original_price)%>
-      </p>
-      <p class="save">折扣：<%=@product.discount%>折
-      </p>
+      <p class="pricea">原价: <%=number_to_currency(@product.original_price)%></p>
+      <p class="save">折扣: <%=@product.discount%>折</p>
       <div class="buy">
         <% if @product.sold_count < @product.total_count %>
           <form action="/welcome/add_to_cart/<%=@product.id%>" method="post">
