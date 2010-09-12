@@ -1,0 +1,5 @@
+# Logfile created on Sun Sep 12 09:16:23 +0800 2010 by logger.rb/22285
+[09/12/10 09:16:23 中国标准时间 WIN-DQC3IH63U7C (3332)] INFO : Dispatcher: webrick
+[09/12/10 09:16:23 中国标准时间 WIN-DQC3IH63U7C (3332)] INFO : Application: tuanao
+[09/12/10 09:16:23 中国标准时间 WIN-DQC3IH63U7C (3332)] INFO : New Relic RPM Agent 2.12.0 Initialized: pid = 3332
+[09/12/10 09:16:23 中国标准时间 WIN-DQC3IH63U7C (3332)] INFO : Agent Log found in C:/Users/Administrator/Documents/NetBeansProjects/TuanAo/log/newrelic_agent.log

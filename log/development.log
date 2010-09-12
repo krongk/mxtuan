@@ -1,0 +1,153 @@
+# Logfile created on Sun Sep 12 09:16:21 +0800 2010Starting the New Relic Agent.
+NewRelic Agent Developer Mode enabled.
+To view performance information, go to http://localhost:3000/newrelic
+New Relic RPM Agent 2.12.0 Initialized: pid = 3332
+Agent Log found in C:/Users/Administrator/Documents/NetBeansProjects/TuanAo/log/newrelic_agent.log
+  [4;36;1mSQL (68.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (10.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (27.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (186.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-12 09:16:31) [GET]
+  [4;36;1mProduct Load (116.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (11.0ms)
+Rendered layouts/_menu (5.0ms)
+Rendered layouts/_share (6.0ms)
+Rendered layouts/_sidebar (20.0ms)
+Rendered layouts/_footer (3.0ms)
+Rendered layouts/_foot_js (3.0ms)
+Completed in 7171ms (View: 6958, DB: 193) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-12 09:22:18) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (7.0ms)
+Rendered layouts/_menu (1.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (5.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 95ms (View: 66, DB: 10) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-12 09:25:37) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (5.0ms)
+Rendered layouts/_menu (1.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 90ms (View: 63, DB: 8) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-12 09:25:39) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (6.0ms)
+Rendered layouts/_menu (1.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 72ms (View: 47, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-12 09:26:13) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (7.0ms)
+Rendered layouts/_menu (1.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (3.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 91ms (View: 67, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-12 09:26:14) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (5.0ms)
+Rendered layouts/_menu (1.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 70ms (View: 45, DB: 9) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-12 09:26:48) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (5.0ms)
+Rendered layouts/_menu (1.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (5.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 70ms (View: 45, DB: 8) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-12 09:26:50) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (6.0ms)
+Rendered layouts/_menu (2.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (5.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (0.0ms)
+Completed in 76ms (View: 48, DB: 8) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-12 09:26:51) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (3.0ms)
+Rendered layouts/_menu (1.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 122ms (View: 36, DB: 7) | 200 OK [http://localhost/]
