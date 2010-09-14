@@ -28,38 +28,12 @@
      </div>
     </td>
   </tr>
-  <tr>
-    <td height="51" align="center" valign="middle">
- <form action="https://pay3.chinabank.com.cn/Payto" method="post" accept-charset="unicode"><INPUT type="hidden" name="v_mid" value="21701769" > <INPUT type="hidden" name="v_id" value="134566" > <INPUT type="hidden" name="v_url" value="http://www.tuanao.com/today" > <INPUT type="hidden" name="quantity" value="1" > <INPUT type="hidden" name="v_amount" value="55" ><INPUT type="image" src="/images/pay4.gif" ></form>
-    </td>
-    <td align="center" valign="middle">
-      
- <!--alipay-->
-<% payment_service_for 'payment code', ActiveMerchant::Billing::Integrations::Alipay::ACCOUNT,
-                            :service => :alipay,
-                            :html => { :id => 'payment-form', :method => :get } do |service| %>
-  <% service.discount @order.product.discount %>
-  <% service.price  @order.product.now_price %>
-  <% service.quantity 1 %>
-  <% service.seller :email => ActiveMerchant::Billing::Integrations::Alipay::EMAIL %>
-  <%# service.buyer :id => 'buyer_id' %>
-  <% service.notify_url url_for(:only_path => false, :action => 'notify') %>
-  <% service.return_url url_for(:only_path => false, :action => 'done') %>
-  <% service.show_url url_for(:only_path => false, :action => 'show') %>
-  <% service.body '团奥网今日团品1件' %>
-  <% service.charset "utf-8" %>
-  <% service.service ActiveMerchant::Billing::Integrations::Alipay::Helper::CREATE_PARTNER_TRADE_BY_BUYER %>
-  <% service.payment_type 1 %>
-  <% service.subject @order.product.title %>
-  <% service.agent ActiveMerchant::Billing::Integrations::Alipay::ACCOUNT %>
-  <% service.logistics :type => 'EXPRESS', :fee => 5, :payment => 'BUYER_PAY' %>
-  <% service.receive :name => '宋学江', :address => '成都市火车南站东路69号美丽南庭3-1128号', :zip => '610041', :phone => '15928661802', :mobile => '15928661802' %>
-  <% service.sign %>
-<% end %>
-<input src="/images/pay2-1.gif?1273538347" type="image" onclick="document.getElementById('payment-form').submit();;"/>
-      
-    </td>
-  </tr>
+  <tr><td>
+   <%form_tag :action => :tenpay do %>  
+	<center><%= image_submit_tag("/image/bt_submit.gif") %></center>
+   <%end %>
+   
+  </td></tr>
 </table>
 </div><div class="BBU"></div><div class="BU"></div></div>
   </div>

@@ -3,3 +3,11 @@
 [09/12/10 09:16:23 中国标准时间 WIN-DQC3IH63U7C (3332)] INFO : Application: tuanao
 [09/12/10 09:16:23 中国标准时间 WIN-DQC3IH63U7C (3332)] INFO : New Relic RPM Agent 2.12.0 Initialized: pid = 3332
 [09/12/10 09:16:23 中国标准时间 WIN-DQC3IH63U7C (3332)] INFO : Agent Log found in C:/Users/Administrator/Documents/NetBeansProjects/TuanAo/log/newrelic_agent.log
+[09/14/10 22:43:08 中国标准时间 WIN-DQC3IH63U7C (3268)] INFO : Dispatcher: webrick
+[09/14/10 22:43:08 中国标准时间 WIN-DQC3IH63U7C (3268)] INFO : Application: tuanao
+[09/14/10 22:43:08 中国标准时间 WIN-DQC3IH63U7C (3268)] INFO : New Relic RPM Agent 2.12.0 Initialized: pid = 3268
+[09/14/10 22:43:08 中国标准时间 WIN-DQC3IH63U7C (3268)] INFO : Agent Log found in c:/Users/Administrator/Documents/NetBeansProjects/TuanAo/log/newrelic_agent.log
+[09/14/10 23:33:22 中国标准时间 WIN-DQC3IH63U7C (2656)] INFO : Dispatcher: webrick
+[09/14/10 23:33:22 中国标准时间 WIN-DQC3IH63U7C (2656)] INFO : Application: tuanao
+[09/14/10 23:33:22 中国标准时间 WIN-DQC3IH63U7C (2656)] INFO : New Relic RPM Agent 2.12.0 Initialized: pid = 2656
+[09/14/10 23:33:22 中国标准时间 WIN-DQC3IH63U7C (2656)] INFO : Agent Log found in c:/Users/Administrator/Documents/NetBeansProjects/TuanAo/log/newrelic_agent.log
