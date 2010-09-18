@@ -3,36 +3,33 @@
   <h3>第二步：支付订单</h3><hr/>
   <table width="100%" >
   <tr>
-    <th width="192" height="45" align="center" valign="middle" bgcolor="#ddd">用户</th>
-    <th width="217" align="center" valign="middle" bgcolor="#ddd"> 需要支付金额</th>
+    <th width="192" height="45" align="center" valign="middle" bgcolor="#eeeeee">用户</th>
+    <th width="217" align="center" valign="middle" bgcolor="#dddddd"> 需要支付金额</th>
   </tr>
   <tr>
-    <td height="51" align="center" valign="middle"><%= @order.user.login %>  </td>
-    <td align="center" valign="middle"><%= @order.order_price %>元</td>
+    <td height="45" align="center" valign="middle"><%= @order.user.login %>  </td>
+    <td align="center" valign="middle"><span class="highlight"><%=number_to_currency(@order.order_price) %></span></td>
   </tr>
    <tr>
-    <th colspan="2"  bgcolor="#ddd" height="30">&nbsp;您的手机</th>
+     <th colspan="2"  bgcolor="#eeeeee" height="40" align="left">&nbsp;您的手机</th>
   </tr>
   <tr>
-    <td colspan="2" >&nbsp;团购成功后，验证码将发送到手机：<%= @order.phone %>，直接凭短信去商家消费。</td>
+    <td colspan="2" height="45">&nbsp;团购成功后，验证码将发送到手机：<span class="highlight"><%= @order.phone %></span>，直接凭短信去商家消费。</td>
   </tr>
   <tr>
-    <th colspan="2"  bgcolor="#ddd" height="30">&nbsp;请选择支付方式</th>
+    <th colspan="2"  bgcolor="#eeeeee" height="40" align="left">&nbsp;请选择支付方式</th>
   </tr>
   <tr>
-    <td colspan="2">
-      <div class="biowit">
-	<input name="zhifu" type="radio" value="1" checked/> <img src="http://119.161.209.92/templates/default/images/tenpay.jpg" align="absmiddle" />
-	<input name="zhifu" type="radio" value="2" /> <img src="http://119.161.209.92/templates/default/images/bg_zfb.gif" align="absmiddle" />
-	<input name="zhifu" type="radio" value="3" /> <img src="http://119.161.209.92/templates/default/images/yeepay.jpg" align="absmiddle" />
+    <td colspan="2" height="45" align="center">
+     <div class="biowit">
+	<input name="zhifu" type="radio" value="1" checked/> <img src="/image/pay3.gif" align="absmiddle" />
+        &nbsp;&nbsp;
+	<input name="zhifu" type="radio" value="2" /> <img src="/image/pay2.gif" align="absmiddle" />
      </div>
-    </td>
-  </tr>
-  <tr><td>
+    </td></tr><tr><td height="60" align="right" colspan="2">
    <%form_tag :action => :tenpay do %>  
-	<center><%= image_submit_tag("/image/bt_submit.gif") %></center>
+	<%= image_submit_tag("/image/bt_submit.gif") %>
    <%end %>
-   
   </td></tr>
 </table>
 </div><div class="BBU"></div><div class="BU"></div></div>

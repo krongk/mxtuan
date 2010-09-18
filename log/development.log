@@ -5622,3 +5622,1141 @@ Processing OrdersController#tenpay (for 127.0.0.1 at 2010-09-18 11:47:34) [POST]
   Parameters: {"x"=>"68", "y"=>"24", "authenticity_token"=>"uw7K/H4v3/z2YfKpxFbaI2vSU2mB0MsUMorYLS7wuvU="}
 Redirected to https://www.tenpay.com/cgi-bin/v1.0/pay_gate.cgi?cmdno=1&date=20100918&bargainor_id=1900000109&transaction_id=1900000109201009180000000001&sp_billno=1&total_fee=4500&fee_type=1&return_url=http://return&attach=attach+data&desc=test+product&sign=CA6C228686BBE08E9CEB1E7C2C661263
 Completed in 576ms (DB: 2) | 302 Found [http://localhost/orders/tenpay]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-18 14:10:54) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (4.0ms)
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) LIMIT 1[0m
+Rendered layouts/_menu (51.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (0.0ms)
+Completed in 135ms (View: 107, DB: 12) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_cart (for 127.0.0.1 at 2010-09-18 14:10:57) [POST]
+  Parameters: {"x"=>"46", "y"=>"34", "authenticity_token"=>"kf3PbEVUxM7EoOT9mIPLfgYxCR+0cagKr5Wkq60USnc=", "id"=>"2"}
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) LIMIT 1[0m
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering welcome/add_to_cart
+Rendered layouts/_head (6.0ms)
+Rendered layouts/_menu (6.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (6.0ms)
+Rendered layouts/_footer (2.0ms)
+Rendered layouts/_foot_js (0.0ms)
+Completed in 164ms (View: 49, DB: 13) | 200 OK [http://localhost/welcome/add_to_cart/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_cart (for 127.0.0.1 at 2010-09-18 14:15:00) [POST]
+  Parameters: {"x"=>"71", "y"=>"21", "authenticity_token"=>"kf3PbEVUxM7EoOT9mIPLfgYxCR+0cagKr5Wkq60USnc=", "id"=>"2"}
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) LIMIT 1[0m
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering welcome/add_to_cart
+Rendered layouts/_head (25.0ms)
+Rendered layouts/_menu (5.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (5.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (6.0ms)
+Completed in 316ms (View: 126, DB: 14) | 200 OK [http://localhost/welcome/add_to_cart/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_cart (for 127.0.0.1 at 2010-09-18 14:16:25) [POST]
+  Parameters: {"x"=>"49", "y"=>"42", "authenticity_token"=>"kf3PbEVUxM7EoOT9mIPLfgYxCR+0cagKr5Wkq60USnc=", "id"=>"2"}
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) LIMIT 1[0m
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering welcome/add_to_cart
+Rendered layouts/_head (5.0ms)
+Rendered layouts/_menu (5.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (5.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 586ms (View: 71, DB: 13) | 200 OK [http://localhost/welcome/add_to_cart/2]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_cart (for 127.0.0.1 at 2010-09-18 14:17:06) [POST]
+  Parameters: {"x"=>"32", "y"=>"42", "authenticity_token"=>"kf3PbEVUxM7EoOT9mIPLfgYxCR+0cagKr5Wkq60USnc=", "id"=>"2"}
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) LIMIT 1[0m
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering welcome/add_to_cart
+Rendered layouts/_head (5.0ms)
+Rendered layouts/_menu (6.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (5.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 208ms (View: 98, DB: 15) | 200 OK [http://localhost/welcome/add_to_cart/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-18 14:20:54) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;36;1mProduct Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (6.0ms)
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) LIMIT 1[0m
+Rendered layouts/_menu (195.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (102.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (4.0ms)
+Completed in 572ms (View: 455, DB: 14) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_cart (for 127.0.0.1 at 2010-09-18 14:20:58) [POST]
+  Parameters: {"x"=>"71", "y"=>"42", "authenticity_token"=>"kf3PbEVUxM7EoOT9mIPLfgYxCR+0cagKr5Wkq60USnc=", "id"=>"2"}
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) LIMIT 1[0m
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering welcome/add_to_cart
+Rendered layouts/_head (5.0ms)
+Rendered layouts/_menu (5.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 198ms (View: 58, DB: 13) | 200 OK [http://localhost/welcome/add_to_cart/2]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-18 14:22:51) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;36;1mProduct Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (5.0ms)
+Rendered layouts/_menu (1.0ms)
+Rendered layouts/_share (0.0ms)
+Rendered layouts/_sidebar (3.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (3.0ms)
+Completed in 149ms (View: 124, DB: 8) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_cart (for 127.0.0.1 at 2010-09-18 14:22:54) [POST]
+  Parameters: {"x"=>"44", "y"=>"37", "authenticity_token"=>"/RJ7yAfsmopoVbIYQIp5i4HyUYPhJBgWKvDSlmsbtdY=", "id"=>"2"}
+Redirected to http://localhost:3000/login
+Completed in 7ms (DB: 1) | 302 Found [http://localhost/welcome/add_to_cart/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-09-18 14:22:55) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_head (7.0ms)
+Rendered layouts/_menu (2.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (6.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 53ms (View: 52, DB: 1) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-09-18 14:23:00) [POST]
+  Parameters: {"commit"=>"登 录", "authenticity_token"=>"/RJ7yAfsmopoVbIYQIp5i4HyUYPhJBgWKvDSlmsbtdY=", "login"=>"lanlan", "password"=>"lanlan"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'lanlan') LIMIT 1[0m
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/welcome/add_to_cart/2
+Completed in 86ms (DB: 7) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_cart (for 127.0.0.1 at 2010-09-18 14:23:01) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (21.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering welcome/add_to_cart
+Rendered layouts/_head (7.0ms)
+Rendered layouts/_menu (6.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (6.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (13.0ms)
+Completed in 238ms (View: 89, DB: 31) | 200 OK [http://localhost/welcome/add_to_cart/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_order (for 127.0.0.1 at 2010-09-18 14:23:09) [POST]
+  Parameters: {"order_price"=>"20.0", "product_id"=>"2", "buyNum"=>"1", "x"=>"82", "y"=>"41", "authenticity_token"=>"/RJ7yAfsmopoVbIYQIp5i4HyUYPhJBgWKvDSlmsbtdY=", "phone"=>"15928666666"}
+  [4;35;1mOrder Columns (29.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mUser Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mProduct Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (11.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (10.0ms)[0m   [0mINSERT INTO `orders` (`order_price`, `address`, `discount`, `created_at`, `product_id`, `quantity`, `updated_at`, `pay_type`, `user_id`, `phone`, `is_pay`) VALUES(20.0, NULL, NULL, '2010-09-18 06:23:09', 2, NULL, '2010-09-18 06:23:09', NULL, 6, '15928666666', NULL)[0m
+  [4;36;1mSQL (48.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Update (2.0ms)[0m   [0;1mUPDATE `products` SET `updated_at` = '2010-09-18 06:23:09', `sold_count` = 13 WHERE `id` = 2[0m
+  [4;35;1mSQL (37.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/orders/58/edit
+Completed in 337ms (DB: 150) | 302 Found [http://localhost/add_to_order]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:23:10) [GET]
+  Parameters: {"id"=>"58"}
+  [4;36;1mOrder Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mOrder Load (1.0ms)[0m   [0mSELECT * FROM `orders` WHERE (`orders`.`id` = 58) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (6.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (10.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (6.0ms)
+Rendered layouts/_footer (17.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 217ms (View: 177, DB: 13) | 200 OK [http://localhost/orders/58/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:23:55) [GET]
+  Parameters: {"id"=>"58"}
+  [4;35;1mOrder Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mOrder Load (1.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 58) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (5.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (7.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (2.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 382ms (View: 346, DB: 12) | 200 OK [http://localhost/orders/58/edit]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:24:11) [GET]
+  Parameters: {"id"=>"58"}
+  [4;36;1mOrder Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mOrder Load (0.0ms)[0m   [0mSELECT * FROM `orders` WHERE (`orders`.`id` = 58) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (8.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (14.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (8.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 291ms (View: 239, DB: 12) | 200 OK [http://localhost/orders/58/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:24:51) [GET]
+  Parameters: {"id"=>"58"}
+  [4;35;1mOrder Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mOrder Load (0.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 58) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;35;1mUser Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (4.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (5.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (3.0ms)
+Rendered layouts/_footer (0.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 190ms (View: 144, DB: 16) | 200 OK [http://localhost/orders/58/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:25:52) [GET]
+  Parameters: {"id"=>"58"}
+  [4;36;1mOrder Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mOrder Load (1.0ms)[0m   [0mSELECT * FROM `orders` WHERE (`orders`.`id` = 58) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;36;1mUser Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (6.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (7.0ms)
+Rendered layouts/_share (30.0ms)
+Rendered layouts/_sidebar (32.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 210ms (View: 172, DB: 15) | 200 OK [http://localhost/orders/58/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:26:06) [GET]
+  Parameters: {"id"=>"58"}
+  [4;35;1mOrder Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mOrder Load (1.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 58) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (9.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (14.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (9.0ms)
+Rendered layouts/_footer (2.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 273ms (View: 218, DB: 12) | 200 OK [http://localhost/orders/58/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:27:06) [GET]
+  Parameters: {"id"=>"58"}
+  [4;36;1mOrder Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mOrder Load (1.0ms)[0m   [0mSELECT * FROM `orders` WHERE (`orders`.`id` = 58) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (5.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (6.0ms)
+Rendered layouts/_share (0.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 179ms (View: 142, DB: 12) | 200 OK [http://localhost/orders/58/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:28:03) [GET]
+  Parameters: {"id"=>"58"}
+  [4;35;1mOrder Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mOrder Load (1.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 58) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (5.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (6.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (3.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 177ms (View: 142, DB: 13) | 200 OK [http://localhost/orders/58/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:28:41) [GET]
+  Parameters: {"id"=>"58"}
+  [4;36;1mOrder Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mOrder Load (1.0ms)[0m   [0mSELECT * FROM `orders` WHERE (`orders`.`id` = 58) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;36;1mUser Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (6.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (6.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (0.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 387ms (View: 317, DB: 19) | 200 OK [http://localhost/orders/58/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:30:31) [GET]
+  Parameters: {"id"=>"58"}
+  [4;35;1mOrder Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mOrder Load (0.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 58) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (5.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (6.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (24.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 225ms (View: 190, DB: 11) | 200 OK [http://localhost/orders/58/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:31:03) [GET]
+  Parameters: {"id"=>"58"}
+  [4;36;1mOrder Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mOrder Load (0.0ms)[0m   [0mSELECT * FROM `orders` WHERE (`orders`.`id` = 58) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (5.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (6.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (0.0ms)
+Completed in 174ms (View: 129, DB: 14) | 200 OK [http://localhost/orders/58/edit]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:31:33) [GET]
+  Parameters: {"id"=>"58"}
+  [4;35;1mOrder Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mOrder Load (0.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 58) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (10.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (17.0ms)
+Rendered layouts/_share (3.0ms)
+Rendered layouts/_sidebar (12.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (2.0ms)
+Completed in 378ms (View: 320, DB: 12) | 200 OK [http://localhost/orders/58/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#tenpay (for 127.0.0.1 at 2010-09-18 14:31:38) [POST]
+  Parameters: {"x"=>"143", "y"=>"12", "authenticity_token"=>"/RJ7yAfsmopoVbIYQIp5i4HyUYPhJBgWKvDSlmsbtdY="}
+Redirected to https://www.tenpay.com/cgi-bin/v1.0/pay_gate.cgi?cmdno=1&date=20100918&bargainor_id=1900000109&transaction_id=1900000109201009180000000001&sp_billno=1&total_fee=1&fee_type=1&return_url=http://www.tuanao.com&attach=attach+data&desc=test+product&sign=E9A47F3A0FABE07B3121671C35353516
+Completed in 104ms (DB: 1) | 302 Found [http://localhost/orders/tenpay]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:32:02) [GET]
+  Parameters: {"id"=>"58"}
+  [4;36;1mOrder Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mOrder Load (0.0ms)[0m   [0mSELECT * FROM `orders` WHERE (`orders`.`id` = 58) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (8.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (16.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (11.0ms)
+Rendered layouts/_footer (2.0ms)
+Rendered layouts/_foot_js (2.0ms)
+Completed in 343ms (View: 284, DB: 13) | 200 OK [http://localhost/orders/58/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:32:06) [GET]
+  Parameters: {"id"=>"58"}
+  [4;35;1mOrder Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mOrder Load (0.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 58) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (6.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (7.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 188ms (View: 149, DB: 12) | 200 OK [http://localhost/orders/58/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:32:32) [GET]
+  Parameters: {"id"=>"58"}
+  [4;36;1mOrder Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mOrder Load (1.0ms)[0m   [0mSELECT * FROM `orders` WHERE (`orders`.`id` = 58) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (7.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (10.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (7.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (2.0ms)
+Completed in 447ms (View: 400, DB: 13) | 200 OK [http://localhost/orders/58/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:33:59) [GET]
+  Parameters: {"id"=>"58"}
+  [4;35;1mOrder Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mOrder Load (0.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 58) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (5.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (6.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (5.0ms)
+Rendered layouts/_footer (223.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 400ms (View: 366, DB: 9) | 200 OK [http://localhost/orders/58/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:34:31) [GET]
+  Parameters: {"id"=>"58"}
+  [4;36;1mOrder Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mOrder Load (0.0ms)[0m   [0mSELECT * FROM `orders` WHERE (`orders`.`id` = 58) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (5.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (6.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 184ms (View: 143, DB: 14) | 200 OK [http://localhost/orders/58/edit]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:42:49) [GET]
+  Parameters: {"id"=>"58"}
+  [4;35;1mOrder Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mOrder Load (1.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 58) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (6.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (6.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 189ms (View: 149, DB: 17) | 200 OK [http://localhost/orders/58/edit]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:43:45) [GET]
+  Parameters: {"id"=>"58"}
+  [4;36;1mOrder Columns (38.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mOrder Load (1.0ms)[0m   [0mSELECT * FROM `orders` WHERE (`orders`.`id` = 58) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (5.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (7.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (3.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 223ms (View: 152, DB: 48) | 200 OK [http://localhost/orders/58/edit]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#tenpay (for 127.0.0.1 at 2010-09-18 14:44:22) [POST]
+  Parameters: {"x"=>"63", "y"=>"32", "authenticity_token"=>"/RJ7yAfsmopoVbIYQIp5i4HyUYPhJBgWKvDSlmsbtdY="}
+Redirected to https://www.tenpay.com/cgi-bin/v1.0/pay_gate.cgi?cmdno=1&date=20100918&bargainor_id=1900000109&transaction_id=1900000109201009180000000001&sp_billno=1&total_fee=1&fee_type=1&return_url=http://www.tuanao.com&attach=attach+data&desc=test+product&sign=E9A47F3A0FABE07B3121671C35353516
+Completed in 39ms (DB: 2) | 302 Found [http://localhost/orders/tenpay]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:44:33) [GET]
+  Parameters: {"id"=>"58"}
+  [4;35;1mOrder Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mOrder Load (0.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 58) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;35;1mUser Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (6.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (6.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 177ms (View: 138, DB: 14) | 200 OK [http://localhost/orders/58/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-18 14:50:13) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (5.0ms)
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) LIMIT 1[0m
+Rendered layouts/_menu (64.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (5.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 160ms (View: 128, DB: 13) | 200 OK [http://localhost/today]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-18 14:50:15) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (5.0ms)
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) LIMIT 1[0m
+Rendered layouts/_menu (48.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 136ms (View: 104, DB: 12) | 200 OK [http://localhost/today]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-18 14:50:17) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (5.0ms)
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) LIMIT 1[0m
+Rendered layouts/_menu (62.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 161ms (View: 129, DB: 14) | 200 OK [http://localhost/today]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_cart (for 127.0.0.1 at 2010-09-18 14:50:20) [POST]
+  Parameters: {"x"=>"73", "y"=>"39", "authenticity_token"=>"kf3PbEVUxM7EoOT9mIPLfgYxCR+0cagKr5Wkq60USnc=", "id"=>"2"}
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) LIMIT 1[0m
+  [4;36;1mProduct Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering welcome/add_to_cart
+Rendered layouts/_head (5.0ms)
+Rendered layouts/_menu (5.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (166.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 315ms (View: 207, DB: 14) | 200 OK [http://localhost/welcome/add_to_cart/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-18 14:50:48) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (6.0ms)
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) LIMIT 1[0m
+Rendered layouts/_menu (65.0ms)
+Rendered layouts/_share (25.0ms)
+Rendered layouts/_sidebar (44.0ms)
+Rendered layouts/_footer (7.0ms)
+Rendered layouts/_foot_js (13.0ms)
+Completed in 236ms (View: 203, DB: 14) | 200 OK [http://localhost/today]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_cart (for 127.0.0.1 at 2010-09-18 14:50:51) [POST]
+  Parameters: {"x"=>"55", "y"=>"37", "authenticity_token"=>"kf3PbEVUxM7EoOT9mIPLfgYxCR+0cagKr5Wkq60USnc=", "id"=>"2"}
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) LIMIT 1[0m
+  [4;36;1mProduct Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering welcome/add_to_cart
+Rendered layouts/_head (6.0ms)
+Rendered layouts/_menu (6.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 156ms (View: 44, DB: 13) | 200 OK [http://localhost/welcome/add_to_cart/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-18 14:51:20) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (7.0ms)
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (73.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (7.0ms)
+Rendered layouts/_footer (2.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 196ms (View: 160, DB: 13) | 200 OK [http://localhost/today]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_cart (for 127.0.0.1 at 2010-09-18 14:51:23) [POST]
+  Parameters: {"x"=>"42", "y"=>"42", "authenticity_token"=>"/RJ7yAfsmopoVbIYQIp5i4HyUYPhJBgWKvDSlmsbtdY=", "id"=>"2"}
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mProduct Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering welcome/add_to_cart
+Rendered layouts/_head (7.0ms)
+Rendered layouts/_menu (6.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (6.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 188ms (View: 53, DB: 11) | 200 OK [http://localhost/welcome/add_to_cart/2]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_order (for 127.0.0.1 at 2010-09-18 14:51:30) [POST]
+  Parameters: {"order_price"=>"20.0", "product_id"=>"2", "buyNum"=>"1", "x"=>"80", "y"=>"26", "authenticity_token"=>"/RJ7yAfsmopoVbIYQIp5i4HyUYPhJBgWKvDSlmsbtdY=", "phone"=>"15928666666"}
+  [4;36;1mOrder Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.0ms)[0m   [0;1mINSERT INTO `orders` (`order_price`, `address`, `discount`, `created_at`, `product_id`, `quantity`, `updated_at`, `pay_type`, `user_id`, `phone`, `is_pay`) VALUES(20.0, NULL, NULL, '2010-09-18 06:51:30', 2, NULL, '2010-09-18 06:51:30', NULL, 6, '15928666666', NULL)[0m
+  [4;35;1mSQL (27.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Update (1.0ms)[0m   [0mUPDATE `products` SET `updated_at` = '2010-09-18 06:51:30', `sold_count` = 14 WHERE `id` = 2[0m
+  [4;36;1mSQL (28.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/orders/59/edit
+Completed in 413ms (DB: 75) | 302 Found [http://localhost/add_to_order]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:51:30) [GET]
+  Parameters: {"id"=>"59"}
+  [4;35;1mOrder Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mOrder Load (1.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 59) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (5.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (7.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (5.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 181ms (View: 145, DB: 13) | 200 OK [http://localhost/orders/59/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-18 14:51:32) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (22.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (5.0ms)
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (72.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 196ms (View: 143, DB: 28) | 200 OK [http://localhost/today]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_cart (for 127.0.0.1 at 2010-09-18 14:51:35) [POST]
+  Parameters: {"x"=>"43", "y"=>"45", "authenticity_token"=>"/RJ7yAfsmopoVbIYQIp5i4HyUYPhJBgWKvDSlmsbtdY=", "id"=>"2"}
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mProduct Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering welcome/add_to_cart
+Rendered layouts/_head (6.0ms)
+Rendered layouts/_menu (7.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (5.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 166ms (View: 51, DB: 14) | 200 OK [http://localhost/welcome/add_to_cart/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_order (for 127.0.0.1 at 2010-09-18 14:51:57) [POST]
+  Parameters: {"order_price"=>"20.0", "product_id"=>"2", "buyNum"=>"1", "x"=>"79", "y"=>"25", "authenticity_token"=>"/RJ7yAfsmopoVbIYQIp5i4HyUYPhJBgWKvDSlmsbtdY=", "phone"=>"13999999999"}
+  [4;36;1mOrder Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mUser Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (1.0ms)[0m   [0;1mINSERT INTO `orders` (`order_price`, `address`, `discount`, `created_at`, `product_id`, `quantity`, `updated_at`, `pay_type`, `user_id`, `phone`, `is_pay`) VALUES(20.0, NULL, NULL, '2010-09-18 06:51:58', 2, NULL, '2010-09-18 06:51:58', NULL, 6, '13999999999', NULL)[0m
+  [4;35;1mSQL (32.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Update (1.0ms)[0m   [0mUPDATE `products` SET `updated_at` = '2010-09-18 06:51:58', `sold_count` = 15 WHERE `id` = 2[0m
+  [4;36;1mSQL (20.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/orders/60/edit
+Completed in 219ms (DB: 73) | 302 Found [http://localhost/add_to_order]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:51:58) [GET]
+  Parameters: {"id"=>"60"}
+  [4;35;1mOrder Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mOrder Load (1.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 60) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (5.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (7.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (6.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 405ms (View: 146, DB: 13) | 200 OK [http://localhost/orders/60/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-18 14:52:37) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (5.0ms)
+  [4;36;1mUser Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) LIMIT 1[0m
+Rendered layouts/_menu (65.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (5.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 168ms (View: 130, DB: 18) | 200 OK [http://localhost/today]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-18 14:52:40) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (7.0ms)
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) LIMIT 1[0m
+Rendered layouts/_menu (313.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (5.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 414ms (View: 383, DB: 12) | 200 OK [http://localhost/today]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_cart (for 127.0.0.1 at 2010-09-18 14:52:43) [POST]
+  Parameters: {"x"=>"63", "y"=>"31", "authenticity_token"=>"kf3PbEVUxM7EoOT9mIPLfgYxCR+0cagKr5Wkq60USnc=", "id"=>"2"}
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) LIMIT 1[0m
+  [4;36;1mProduct Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering welcome/add_to_cart
+Rendered layouts/_head (5.0ms)
+Rendered layouts/_menu (6.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (0.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 156ms (View: 45, DB: 13) | 200 OK [http://localhost/welcome/add_to_cart/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-18 14:53:49) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (4.0ms)
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (49.0ms)
+Rendered layouts/_share (0.0ms)
+Rendered layouts/_sidebar (3.0ms)
+Rendered layouts/_footer (0.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 133ms (View: 99, DB: 13) | 200 OK [http://localhost/today]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-18 14:53:52) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (5.0ms)
+  [4;36;1mUser Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (65.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (0.0ms)
+Completed in 156ms (View: 119, DB: 16) | 200 OK [http://localhost/today]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_cart (for 127.0.0.1 at 2010-09-18 14:53:54) [POST]
+  Parameters: {"x"=>"64", "y"=>"34", "authenticity_token"=>"/RJ7yAfsmopoVbIYQIp5i4HyUYPhJBgWKvDSlmsbtdY=", "id"=>"2"}
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (36.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mProduct Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering welcome/add_to_cart
+Rendered layouts/_head (5.0ms)
+Rendered layouts/_menu (6.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (3.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 205ms (View: 59, DB: 50) | 200 OK [http://localhost/welcome/add_to_cart/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_order (for 127.0.0.1 at 2010-09-18 14:53:56) [POST]
+  Parameters: {"order_price"=>"20.0", "product_id"=>"2", "buyNum"=>"1", "x"=>"50", "y"=>"16", "authenticity_token"=>"/RJ7yAfsmopoVbIYQIp5i4HyUYPhJBgWKvDSlmsbtdY=", "phone"=>""}
+  [4;36;1mOrder Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.0ms)[0m   [0;1mINSERT INTO `orders` (`order_price`, `address`, `discount`, `created_at`, `product_id`, `quantity`, `updated_at`, `pay_type`, `user_id`, `phone`, `is_pay`) VALUES(20.0, NULL, NULL, '2010-09-18 06:53:56', 2, NULL, '2010-09-18 06:53:56', NULL, 6, '', NULL)[0m
+  [4;35;1mSQL (45.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Update (1.0ms)[0m   [0mUPDATE `products` SET `updated_at` = '2010-09-18 06:53:56', `sold_count` = 16 WHERE `id` = 2[0m
+  [4;36;1mSQL (30.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/orders/61/edit
+Completed in 229ms (DB: 94) | 302 Found [http://localhost/add_to_order]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:53:57) [GET]
+  Parameters: {"id"=>"61"}
+  [4;35;1mOrder Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mOrder Load (1.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 61) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (6.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (6.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (5.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 370ms (View: 339, DB: 11) | 200 OK [http://localhost/orders/61/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-18 14:54:30) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (5.0ms)
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (62.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 152ms (View: 120, DB: 15) | 200 OK [http://localhost/today]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-18 14:54:33) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (6.0ms)
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (59.0ms)
+Rendered layouts/_share (0.0ms)
+Rendered layouts/_sidebar (3.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 147ms (View: 115, DB: 14) | 200 OK [http://localhost/today]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_cart (for 127.0.0.1 at 2010-09-18 14:54:35) [POST]
+  Parameters: {"x"=>"65", "y"=>"45", "authenticity_token"=>"/RJ7yAfsmopoVbIYQIp5i4HyUYPhJBgWKvDSlmsbtdY=", "id"=>"2"}
+  [4;36;1mUser Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mProduct Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering welcome/add_to_cart
+Rendered layouts/_head (5.0ms)
+Rendered layouts/_menu (6.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (5.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 172ms (View: 56, DB: 17) | 200 OK [http://localhost/welcome/add_to_cart/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_order (for 127.0.0.1 at 2010-09-18 14:54:50) [POST]
+  Parameters: {"order_price"=>"20.0", "product_id"=>"2", "buyNum"=>"1", "x"=>"46", "y"=>"20", "authenticity_token"=>"/RJ7yAfsmopoVbIYQIp5i4HyUYPhJBgWKvDSlmsbtdY=", "phone"=>"15999999999"}
+  [4;36;1mOrder Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.0ms)[0m   [0;1mINSERT INTO `orders` (`order_price`, `address`, `discount`, `created_at`, `product_id`, `quantity`, `updated_at`, `pay_type`, `user_id`, `phone`, `is_pay`) VALUES(20.0, NULL, NULL, '2010-09-18 06:54:50', 2, NULL, '2010-09-18 06:54:50', NULL, 6, '15999999999', NULL)[0m
+  [4;35;1mSQL (44.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Update (0.0ms)[0m   [0mUPDATE `products` SET `updated_at` = '2010-09-18 06:54:50', `sold_count` = 17 WHERE `id` = 2[0m
+  [4;36;1mSQL (30.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/orders/62/edit
+Completed in 228ms (DB: 90) | 302 Found [http://localhost/add_to_order]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-18 14:54:51) [GET]
+  Parameters: {"id"=>"62"}
+  [4;35;1mOrder Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mOrder Load (0.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 62) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (5.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (6.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (0.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 156ms (View: 120, DB: 13) | 200 OK [http://localhost/orders/62/edit]
