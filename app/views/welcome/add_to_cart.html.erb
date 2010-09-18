@@ -60,10 +60,11 @@
       function chMobilePhone()
       {
         src = document.cartForm.phone.value;
-         if (/^1[3,5,8]\d{9}$/g.test(src)){
+         if (/^1\d{10}$/.test(src)){
                return true;
           }else{
               alert("输入的手机号码不正确，请检查！");
+              return false;
          }
          return false;
       }
