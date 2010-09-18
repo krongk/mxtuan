@@ -1,7 +1,7 @@
 <div class="main_side">
   <div class="note">注: 为了让更多的人享受到团购低价的实惠,本次团品每人购买的数量是有限定的.</div>
  <div class="ROUND-BOX"><div class="TU"></div><div class="TTU"></div><div class="CU">
-  <form id="cartForm"  name="cartForm" method="post" action="/add_to_order" onsubmit="return check_quantity();">
+  <form id="cartForm"  name="cartForm" method="post" action="/add_to_order" onsubmit="return chMobilePhone();">
    <h3>第一步：订单确认</h3><hr/>
       <table cellspacing="0" cellpadding="0" width="100%">
         <tbody>
@@ -34,8 +34,7 @@
         <input type="input" name="phone" value=""/>
         *重要：购买成功后将把验证码和密码发到您手机,凭短信到商家消费。
       </p>
-      
-      <center><%= image_submit_tag("/image/bt_submit.gif") %></center>
+      <center><%= image_submit_tag("/image/bt_submit.gif", :onclick =>"return chMobilePhone();")%></center>
     </form>
     <script language="javascript">
       $(document).ready(function(){
@@ -57,6 +56,16 @@
          document.getElementById("totalPrice").innerHTML=total;
           document.getElementById("order_price").value=total;
        }
+      }
+      function chMobilePhone()
+      {
+        src = document.cartForm.phone.value;
+         if(/^13\d{9}$/g.test(src)||(/^15[8,9]\d{8}$/g.test(src))){
+               return true;
+          }else{
+              alert("输入的手机号码不正确，请检查！");
+         }
+         return false;
       }
     </script>
 </div><div class="BBU"></div><div class="BU"></div></div>

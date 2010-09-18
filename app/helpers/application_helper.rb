@@ -4,7 +4,7 @@ module ApplicationHelper
   #格式化货币
   def number_to_currency(price)
     if price
-      sprintf("Y%0.01f",price)
+      sprintf("￥%0.01f",price)
     else
       ""
     end
