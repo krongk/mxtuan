@@ -6989,3 +6989,465 @@ Processing OrdersController#tenpay (for 127.0.0.1 at 2010-09-18 20:47:40) [POST]
   Parameters: {"x"=>"92", "y"=>"34", "authenticity_token"=>"S1Qrsui+/GV1XaHxq3NZ19dQormwPWrmdDSZOi8Dgks="}
 Redirected to https://www.tenpay.com/cgi-bin/v1.0/pay_gate.cgi?cmdno=1&date=20100918&bargainor_id=1900000109&transaction_id=1900000109201009180000000001&sp_billno=1&total_fee=1&fee_type=1&return_url=http://www.tuanao.com&attach=attach+data&desc=test+product&sign=E9A47F3A0FABE07B3121671C35353516
 Completed in 708ms (DB: 1) | 302 Found [http://localhost/orders/tenpay]
+Starting the New Relic Agent.
+NewRelic Agent Developer Mode enabled.
+To view performance information, go to http://localhost:3000/newrelic
+New Relic RPM Agent 2.12.0 Initialized: pid = 2120
+Agent Log found in C:/Users/Administrator/Documents/NetBeansProjects/TuanAo/log/newrelic_agent.log
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (14.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (356.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-22 15:18:53) [GET]
+  [4;36;1mProduct Load (112.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (11.0ms)
+Rendered layouts/_menu (18.0ms)
+Rendered layouts/_share (20.0ms)
+Rendered layouts/_sidebar (46.0ms)
+Rendered layouts/_footer (22.0ms)
+Rendered layouts/_foot_js (8.0ms)
+Completed in 8554ms (View: 8338, DB: 198) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_cart (for 127.0.0.1 at 2010-09-22 15:19:20) [POST]
+  Parameters: {"x"=>"56", "y"=>"43", "authenticity_token"=>"SZAWhhUey9EvsjZ63RFP8A5oV0Ai9hxZLkIK553NS/s=", "id"=>"2"}
+Redirected to http://localhost:3000/login
+Completed in 11ms (DB: 3) | 302 Found [http://localhost/welcome/add_to_cart/2]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-09-22 15:19:21) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_head (8.0ms)
+Rendered layouts/_menu (2.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (9.0ms)
+Rendered layouts/_footer (2.0ms)
+Rendered layouts/_foot_js (0.0ms)
+Completed in 104ms (View: 102, DB: 2) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-09-22 15:19:27) [POST]
+  Parameters: {"commit"=>"登 录", "authenticity_token"=>"SZAWhhUey9EvsjZ63RFP8A5oV0Ai9hxZLkIK553NS/s=", "login"=>"lanlan", "password"=>"lanlan"}
+  [4;36;1mUser Load (28.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'lanlan') LIMIT 1[0m
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/welcome/add_to_cart/2
+Completed in 207ms (DB: 33) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_cart (for 127.0.0.1 at 2010-09-22 15:19:27) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering welcome/add_to_cart
+Rendered layouts/_head (6.0ms)
+Rendered layouts/_menu (7.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (7.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (2.0ms)
+Completed in 282ms (View: 129, DB: 11) | 200 OK [http://localhost/welcome/add_to_cart/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_order (for 127.0.0.1 at 2010-09-22 15:19:39) [POST]
+  Parameters: {"order_price"=>"20.0", "product_id"=>"2", "buyNum"=>"1", "x"=>"0", "y"=>"0", "authenticity_token"=>"SZAWhhUey9EvsjZ63RFP8A5oV0Ai9hxZLkIK553NS/s=", "phone"=>"15928888888"}
+  [4;36;1mOrder Columns (87.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.0ms)[0m   [0;1mINSERT INTO `orders` (`order_price`, `address`, `discount`, `created_at`, `product_id`, `quantity`, `updated_at`, `pay_type`, `user_id`, `phone`, `is_pay`) VALUES(20.0, NULL, NULL, '2010-09-22 07:19:39', 2, NULL, '2010-09-22 07:19:39', NULL, 6, '15928888888', NULL)[0m
+  [4;35;1mSQL (21.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Update (1.0ms)[0m   [0mUPDATE `products` SET `updated_at` = '2010-09-22 07:19:39', `sold_count` = 20 WHERE `id` = 2[0m
+  [4;36;1mSQL (24.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/orders/65/edit
+Completed in 493ms (DB: 154) | 302 Found [http://localhost/add_to_order]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-22 15:19:40) [GET]
+  Parameters: {"id"=>"65"}
+  [4;35;1mOrder Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mOrder Load (0.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 65) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (7.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (12.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (8.0ms)
+Rendered layouts/_footer (2.0ms)
+Rendered layouts/_foot_js (2.0ms)
+Completed in 280ms (View: 220, DB: 12) | 200 OK [http://localhost/orders/65/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#tenpay (for 127.0.0.1 at 2010-09-22 15:21:09) [POST]
+  Parameters: {"x"=>"67", "y"=>"16", "authenticity_token"=>"SZAWhhUey9EvsjZ63RFP8A5oV0Ai9hxZLkIK553NS/s="}
+
+MissingSourceFile (no such file to load -- hpricot):
+  app/controllers/orders_controller.rb:84:in `tenpay'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (140.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+Starting the New Relic Agent.
+NewRelic Agent Developer Mode enabled.
+To view performance information, go to http://localhost:3000/newrelic
+New Relic RPM Agent 2.12.0 Initialized: pid = 196
+Agent Log found in C:/Users/Administrator/Documents/NetBeansProjects/TuanAo/log/newrelic_agent.log
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-22 15:23:31) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (5.0ms)
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (54.0ms)
+Rendered layouts/_share (5.0ms)
+Rendered layouts/_sidebar (16.0ms)
+Rendered layouts/_footer (4.0ms)
+Rendered layouts/_foot_js (2.0ms)
+Completed in 960ms (View: 921, DB: 20) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_cart (for 127.0.0.1 at 2010-09-22 15:24:26) [POST]
+  Parameters: {"x"=>"42", "y"=>"48", "authenticity_token"=>"SZAWhhUey9EvsjZ63RFP8A5oV0Ai9hxZLkIK553NS/s=", "id"=>"2"}
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mProduct Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering welcome/add_to_cart
+Rendered layouts/_head (7.0ms)
+Rendered layouts/_menu (5.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (0.0ms)
+Completed in 157ms (View: 54, DB: 14) | 200 OK [http://localhost/welcome/add_to_cart/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_order (for 127.0.0.1 at 2010-09-22 15:24:32) [POST]
+  Parameters: {"order_price"=>"20.0", "product_id"=>"2", "buyNum"=>"1", "x"=>"66", "y"=>"13", "authenticity_token"=>"SZAWhhUey9EvsjZ63RFP8A5oV0Ai9hxZLkIK553NS/s=", "phone"=>"15928888888"}
+  [4;36;1mOrder Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mUser Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (1.0ms)[0m   [0;1mINSERT INTO `orders` (`order_price`, `address`, `discount`, `created_at`, `product_id`, `quantity`, `updated_at`, `pay_type`, `user_id`, `phone`, `is_pay`) VALUES(20.0, NULL, NULL, '2010-09-22 07:24:32', 2, NULL, '2010-09-22 07:24:32', NULL, 6, '15928888888', NULL)[0m
+  [4;35;1mSQL (45.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Update (0.0ms)[0m   [0mUPDATE `products` SET `updated_at` = '2010-09-22 07:24:32', `sold_count` = 21 WHERE `id` = 2[0m
+  [4;36;1mSQL (20.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/orders/66/edit
+Completed in 252ms (DB: 86) | 302 Found [http://localhost/add_to_order]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-22 15:24:33) [GET]
+  Parameters: {"id"=>"66"}
+  [4;35;1mOrder Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mOrder Load (1.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 66) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (6.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (6.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (0.0ms)
+Completed in 171ms (View: 134, DB: 15) | 200 OK [http://localhost/orders/66/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#tenpay (for 127.0.0.1 at 2010-09-22 15:24:35) [POST]
+  Parameters: {"x"=>"79", "y"=>"32", "authenticity_token"=>"SZAWhhUey9EvsjZ63RFP8A5oV0Ai9hxZLkIK553NS/s="}
+
+MissingSourceFile (no such file to load -- hpricot_scan):
+  app/controllers/orders_controller.rb:84:in `tenpay'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (95.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-22 18:53:22) [GET]
+  [4;36;1mProduct Load (3.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (3.0ms)
+Rendered layouts/_menu (1.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (3.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 7369ms (View: 7340, DB: 10) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_cart (for 127.0.0.1 at 2010-09-22 18:53:52) [POST]
+  Parameters: {"x"=>"39", "y"=>"43", "authenticity_token"=>"/n9vR5WlV2AdU1djfOEcxzdd0kvCTmZ6Y9E3Kb5nvtQ=", "id"=>"2"}
+Redirected to http://localhost:3000/login
+Completed in 6ms (DB: 1) | 302 Found [http://localhost/welcome/add_to_cart/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-09-22 18:53:53) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_head (5.0ms)
+Rendered layouts/_menu (1.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (5.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 48ms (View: 46, DB: 1) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-09-22 18:53:59) [POST]
+  Parameters: {"commit"=>"登 录", "authenticity_token"=>"/n9vR5WlV2AdU1djfOEcxzdd0kvCTmZ6Y9E3Kb5nvtQ=", "login"=>"lanlan", "password"=>"lanlan"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'lanlan') LIMIT 1[0m
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/welcome/add_to_cart/2
+Completed in 61ms (DB: 7) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_cart (for 127.0.0.1 at 2010-09-22 18:53:59) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mProduct Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering welcome/add_to_cart
+Rendered layouts/_head (6.0ms)
+Rendered layouts/_menu (5.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 156ms (View: 40, DB: 12) | 200 OK [http://localhost/welcome/add_to_cart/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_order (for 127.0.0.1 at 2010-09-22 18:54:04) [POST]
+  Parameters: {"order_price"=>"20.0", "product_id"=>"2", "buyNum"=>"1", "x"=>"62", "y"=>"26", "authenticity_token"=>"/n9vR5WlV2AdU1djfOEcxzdd0kvCTmZ6Y9E3Kb5nvtQ=", "phone"=>"15928661802"}
+  [4;36;1mOrder Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mProduct Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.0ms)[0m   [0;1mINSERT INTO `orders` (`order_price`, `address`, `discount`, `created_at`, `product_id`, `quantity`, `updated_at`, `pay_type`, `user_id`, `phone`, `is_pay`) VALUES(20.0, NULL, NULL, '2010-09-22 10:54:04', 2, NULL, '2010-09-22 10:54:04', NULL, 6, '15928661802', NULL)[0m
+  [4;35;1mSQL (34.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Update (1.0ms)[0m   [0mUPDATE `products` SET `updated_at` = '2010-09-22 10:54:04', `sold_count` = 22 WHERE `id` = 2[0m
+  [4;36;1mSQL (25.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/orders/67/edit
+Completed in 201ms (DB: 74) | 302 Found [http://localhost/add_to_order]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-22 18:54:05) [GET]
+  Parameters: {"id"=>"67"}
+  [4;35;1mOrder Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mOrder Load (1.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 67) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (5.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (10.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 180ms (View: 144, DB: 11) | 200 OK [http://localhost/orders/67/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#tenpay (for 127.0.0.1 at 2010-09-22 18:54:16) [POST]
+  Parameters: {"x"=>"54", "y"=>"20", "authenticity_token"=>"/n9vR5WlV2AdU1djfOEcxzdd0kvCTmZ6Y9E3Kb5nvtQ="}
+Redirected to https://www.tenpay.com/cgi-bin/v1.0/pay_gate.cgi?cmdno=1&date=20100922&bargainor_id=&transaction_id=201009220000000001&sp_billno=1&total_fee=1&fee_type=1&return_url=http://www.tuanao.com&attach=attach+data&desc=test+product&sign=ACDBE9D1E141373BE64FF97B8AF1DA16
+Completed in 136ms (DB: 1) | 302 Found [http://localhost/orders/tenpay]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-22 19:03:08) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (5.0ms)
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (62.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 162ms (View: 125, DB: 16) | 200 OK [http://localhost/today]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#today (for 127.0.0.1 at 2010-09-22 19:03:10) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (status=1) ORDER BY created_at desc LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/today
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered layouts/_head (6.0ms)
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (61.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (0.0ms)
+Completed in 155ms (View: 124, DB: 12) | 200 OK [http://localhost/today]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_cart (for 127.0.0.1 at 2010-09-22 19:03:15) [POST]
+  Parameters: {"x"=>"80", "y"=>"36", "authenticity_token"=>"/n9vR5WlV2AdU1djfOEcxzdd0kvCTmZ6Y9E3Kb5nvtQ=", "id"=>"2"}
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mProduct Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering welcome/add_to_cart
+Rendered layouts/_head (6.0ms)
+Rendered layouts/_menu (5.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (5.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 150ms (View: 42, DB: 14) | 200 OK [http://localhost/welcome/add_to_cart/2]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#add_to_order (for 127.0.0.1 at 2010-09-22 19:03:18) [POST]
+  Parameters: {"order_price"=>"20.0", "product_id"=>"2", "buyNum"=>"1", "x"=>"50", "y"=>"16", "authenticity_token"=>"/n9vR5WlV2AdU1djfOEcxzdd0kvCTmZ6Y9E3Kb5nvtQ=", "phone"=>"15928661802"}
+  [4;36;1mOrder Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.0ms)[0m   [0;1mINSERT INTO `orders` (`order_price`, `address`, `discount`, `created_at`, `product_id`, `quantity`, `updated_at`, `pay_type`, `user_id`, `phone`, `is_pay`) VALUES(20.0, NULL, NULL, '2010-09-22 11:03:18', 2, NULL, '2010-09-22 11:03:18', NULL, 6, '15928661802', NULL)[0m
+  [4;35;1mSQL (39.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Update (1.0ms)[0m   [0mUPDATE `products` SET `updated_at` = '2010-09-22 11:03:19', `sold_count` = 23 WHERE `id` = 2[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/orders/68/edit
+Completed in 223ms (DB: 75) | 302 Found [http://localhost/add_to_order]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2010-09-22 19:03:19) [GET]
+  Parameters: {"id"=>"68"}
+  [4;35;1mOrder Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mOrder Load (1.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 68) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+Rendered layouts/_head (5.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered layouts/_menu (7.0ms)
+Rendered layouts/_share (1.0ms)
+Rendered layouts/_sidebar (4.0ms)
+Rendered layouts/_footer (1.0ms)
+Rendered layouts/_foot_js (1.0ms)
+Completed in 164ms (View: 130, DB: 11) | 200 OK [http://localhost/orders/68/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#tenpay (for 127.0.0.1 at 2010-09-22 19:03:21) [POST]
+  Parameters: {"x"=>"90", "y"=>"10", "authenticity_token"=>"/n9vR5WlV2AdU1djfOEcxzdd0kvCTmZ6Y9E3Kb5nvtQ="}
+Redirected to https://www.tenpay.com/cgi-bin/v1.0/pay_gate.cgi?cmdno=1&date=20100922&bargainor_id=&transaction_id=201009220000100203&sp_billno=100203&total_fee=10&fee_type=1&return_url=http://www.tuanao.com&attach=attach+data&desc=test+product&sign=67F4CA5A19DB7B2F0B7707552132406B
+Completed in 39ms (DB: 0) | 302 Found [http://localhost/orders/tenpay]

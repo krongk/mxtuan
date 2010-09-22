@@ -1,0 +1,10 @@
+have_header: checking for stdio.h... -------------------- no
+
+"gcc -E -I. -Ic:/Ruby187/lib/ruby/1.8/i386-mingw32 -IC:/Users/Administrator/Documents/NetBeansProjects/TuanAo/vendor/plugins/hpricot/ext/fast_xs    -g -O2 -DFD_SETSIZE=256     conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include <stdio.h>
+/* end */
+
+--------------------
+

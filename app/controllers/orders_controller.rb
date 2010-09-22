@@ -81,12 +81,13 @@ class OrdersController < ApplicationController
 
   #tenpay
   def tenpay
-	@request = Tenpay::Request.new('test product', # Product name
-                  1, # Order id, should be unique
-                  1, # Product price, in cent
-                  'http://www.tuanao.com', # Url user will return after the transaction, support Get/Post
-                  request.remote_ip, # Use for ip validation, ignored in development mode.
-                  'attach data') # Attach data, will be pass to the return url.
-	redirect_to @request.url
+   @request = Tenpay::Request.new(
+         'test product',		# Product name
+          100203,           # Order id, should be unique
+          10,               # Product price, in cent
+          'http://www.tuanao.com',	# Url user will return after the transaction, support Get/Post
+          request.remote_ip,	# Use for ip validation, ignored in development mode.
+          'attach data')		# Attach data, will be pass to the return url.
+    redirect_to @request.url
   end
 end
